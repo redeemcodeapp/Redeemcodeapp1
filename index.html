@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no" />
-    <title>
-     FREE DIAMOND
-    </title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet" />
-    <style>
-      :root {
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no" />
+  <title>FREE DIAMOND</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
       --bg: #05040a;
       --surface: #0e0a16;
       --glass: rgba(14, 10, 22, 0.78);
@@ -100,21 +99,10 @@
       border-radius: 50%;
     }
 
-    .brand-dots span:nth-child(1) {
-      background: #ff9a1a;
-    }
-
-    .brand-dots span:nth-child(2) {
-      background: #a855f7;
-    }
-
-    .brand-dots span:nth-child(3) {
-      background: #22d3ee;
-    }
-
-    .brand-dots span:nth-child(4) {
-      background: #ffe066;
-    }
+    .brand-dots span:nth-child(1) { background: #ff9a1a; }
+    .brand-dots span:nth-child(2) { background: #a855f7; }
+    .brand-dots span:nth-child(3) { background: #22d3ee; }
+    .brand-dots span:nth-child(4) { background: #ffe066; }
 
     .brand h1 {
       font-size: 15px;
@@ -153,17 +141,8 @@
     }
 
     @keyframes pulse {
-
-      0%,
-      100% {
-        opacity: 1;
-        transform: scale(1);
-      }
-
-      50% {
-        opacity: 0.5;
-        transform: scale(0.85);
-      }
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.85); }
     }
 
     /* Ticker */
@@ -191,13 +170,8 @@
     }
 
     @keyframes scroll {
-      0% {
-        transform: translateX(0);
-      }
-
-      100% {
-        transform: translateX(-50%);
-      }
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
     }
 
     /* Main */
@@ -210,9 +184,7 @@
     }
 
     @media (min-width: 768px) {
-      .page {
-        padding: 24px 16px 40px;
-      }
+      .page { padding: 24px 16px 40px; }
     }
 
     .section-tag {
@@ -262,15 +234,11 @@
         align-items: start;
       }
 
-      .right-col {
-        gap: 16px;
-      }
+      .right-col { gap: 16px; }
     }
 
     /* Video */
-    .video-panel {
-      position: relative;
-    }
+    .video-panel { position: relative; }
 
     .video-frame {
       position: relative;
@@ -358,7 +326,7 @@
       animation: pulse 1.4s ease-in-out infinite;
     }
 
-    /* Step bridge — between video &amp; install card */
+    /* Step bridge */
     .step-bridge {
       text-align: center;
       padding: 14px 0 12px;
@@ -401,18 +369,9 @@
     }
 
     @media (min-width: 768px) {
-      .step-bridge {
-        padding: 8px 0 4px;
-      }
-
-      .bridge-title {
-        font-size: 20px;
-      }
-
-      .bridge-sub {
-        font-size: 12px;
-        margin-bottom: 12px;
-      }
+      .step-bridge { padding: 8px 0 4px; }
+      .bridge-title { font-size: 20px; }
+      .bridge-sub { font-size: 12px; margin-bottom: 12px; }
     }
 
     /* Live comments */
@@ -501,9 +460,7 @@
       }
     }
 
-    .scroll-hint {
-      display: none;
-    }
+    .scroll-hint { display: none; }
 
     @media (max-width: 767px) {
       .scroll-hint {
@@ -528,23 +485,12 @@
       }
 
       @keyframes hintBounce {
-
-        0%,
-        100% {
-          transform: translateY(0);
-          opacity: 0.7;
-        }
-
-        50% {
-          transform: translateY(3px);
-          opacity: 1;
-        }
+        0%, 100% { transform: translateY(0); opacity: 0.7; }
+        50% { transform: translateY(3px); opacity: 1; }
       }
     }
 
-    .comments-scroll::-webkit-scrollbar {
-      width: 3px;
-    }
+    .comments-scroll::-webkit-scrollbar { width: 3px; }
 
     .comments-scroll::-webkit-scrollbar-thumb {
       background: rgba(168, 85, 247, 0.35);
@@ -558,15 +504,8 @@
     }
 
     @keyframes commentPop {
-      from {
-        opacity: 0;
-        transform: translateY(6px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .comment-avatar {
@@ -582,10 +521,7 @@
       color: #fff;
     }
 
-    .comment-body {
-      flex: 1;
-      min-width: 0;
-    }
+    .comment-body { flex: 1; min-width: 0; }
 
     .comment-meta {
       display: flex;
@@ -646,39 +582,17 @@
       animation: typeDot 1s ease-in-out infinite;
     }
 
-    .typing-dots span:nth-child(2) {
-      animation-delay: 0.15s;
-    }
-
-    .typing-dots span:nth-child(3) {
-      animation-delay: 0.3s;
-    }
+    .typing-dots span:nth-child(2) { animation-delay: 0.15s; }
+    .typing-dots span:nth-child(3) { animation-delay: 0.3s; }
 
     @keyframes typeDot {
-
-      0%,
-      100% {
-        opacity: 0.3;
-        transform: translateY(0);
-      }
-
-      50% {
-        opacity: 1;
-        transform: translateY(-3px);
-      }
+      0%, 100% { opacity: 0.3; transform: translateY(0); }
+      50% { opacity: 1; transform: translateY(-3px); }
     }
 
-    .typing-bar.hidden {
-      display: none;
-    }
-
-    .video-caption {
-      display: none;
-    }
-
-    .video-sub {
-      display: none;
-    }
+    .typing-bar.hidden { display: none; }
+    .video-caption { display: none; }
+    .video-sub { display: none; }
 
     /* Offer card */
     .offer-card {
@@ -733,10 +647,7 @@
       gap: 12px;
     }
 
-    .offer-card-body {
-      flex: 1;
-      min-width: 0;
-    }
+    .offer-card-body { flex: 1; min-width: 0; }
 
     .app-icon {
       width: 56px;
@@ -749,13 +660,8 @@
     }
 
     @media (min-width: 768px) {
-      .icon-wrap {
-        margin-bottom: 18px;
-      }
-
-      .offer-card-inner {
-        display: block;
-      }
+      .icon-wrap { margin-bottom: 18px; }
+      .offer-card-inner { display: block; }
 
       .app-icon {
         width: 88px;
@@ -900,19 +806,9 @@
     }
 
     @media (min-width: 768px) {
-      .chip {
-        padding: 10px 6px;
-        border-radius: 12px;
-      }
-
-      .chip strong {
-        font-size: 13px;
-        margin-bottom: 2px;
-      }
-
-      .chip span {
-        font-size: 10px;
-      }
+      .chip { padding: 10px 6px; border-radius: 12px; }
+      .chip strong { font-size: 13px; margin-bottom: 2px; }
+      .chip span { font-size: 10px; }
     }
 
     .install-btn {
@@ -961,9 +857,7 @@
     }
 
     /* Trust row */
-    .trust-row {
-      display: none;
-    }
+    .trust-row { display: none; }
 
     @media (min-width: 768px) {
       .trust-row {
@@ -992,9 +886,7 @@
       opacity: 0.8;
     }
 
-    .trust-item strong {
-      color: var(--text);
-    }
+    .trust-item strong { color: var(--text); }
 
     footer {
       position: relative;
@@ -1014,26 +906,16 @@
     }
 
     @media (max-width: 767px) {
-      header {
-        padding: 10px 14px;
-      }
-
-      .brand h1 {
-        font-size: 13px;
-      }
+      header { padding: 10px 14px; }
+      .brand h1 { font-size: 13px; }
 
       .live-badge {
         font-size: 9px;
         padding: 5px 10px;
       }
 
-      .ticker-wrap {
-        padding: 6px 0;
-      }
-
-      .ticker-track {
-        font-size: 11px;
-      }
+      .ticker-wrap { padding: 6px 0; }
+      .ticker-track { font-size: 11px; }
 
       .page {
         display: flex;
@@ -1042,30 +924,17 @@
         padding-bottom: 0;
       }
 
-      .split {
-        flex: 1 1 auto;
-      }
-
-      .step-bridge {
-        padding: 10px 0 8px;
-      }
-
-      .bridge-sub {
-        margin-bottom: 8px;
-      }
-
-      .install-stat {
-        margin-bottom: 8px;
-      }
+      .split { flex: 1 1 auto; }
+      .step-bridge { padding: 10px 0 8px; }
+      .bridge-sub { margin-bottom: 8px; }
+      .install-stat { margin-bottom: 8px; }
 
       .offer-panel .section-tag {
         margin-top: 8px;
         margin-bottom: 6px;
       }
 
-      .offer-card {
-        padding: 12px;
-      }
+      .offer-card { padding: 12px; }
 
       .live-chat {
         margin-top: 10px;
@@ -1087,396 +956,275 @@
         font-size: 11px;
       }
 
-      .comment-name {
-        font-size: 12px;
-      }
-
-      .comment-text {
-        font-size: 12px;
-      }
+      .comment-name { font-size: 12px; }
+      .comment-text { font-size: 12px; }
     }
-    /* Telegram Channel */
-    .telegram-channel-wrap {
-      position: relative;
-      z-index: 2;
-      display: flex;
-      justify-content: center;
-      padding: 12px 16px 4px;
-    }
+  </style>
+</head>
 
-    .telegram-channel-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 9px;
-      width: min(100%, 420px);
-      padding: 13px 20px;
-      border-radius: 14px;
-      background: #229ED9;
-      color: #fff;
-      text-decoration: none;
-      font-weight: 800;
-      font-size: 14px;
-      letter-spacing: .02em;
-      box-shadow: 0 8px 24px rgba(34, 158, 217, .22);
-      transition: transform .2s ease, box-shadow .2s ease;
-    }
+<body>
+  <div class="grid-bg" aria-hidden="true"></div>
 
-    .telegram-channel-btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 10px 30px rgba(34, 158, 217, .30);
-    }
-
-    .telegram-channel-btn:active {
-      transform: scale(.98);
-    }
-
-    .telegram-channel-logo {
-      width: 21px;
-      height: 21px;
-      object-fit: contain;
-      flex-shrink: 0;
-    }
-
-    </style>
-  </head>
-  <body>
-    <div class="grid-bg" aria-hidden="true">
+  <header>
+    <div class="brand">
+      <div class="brand-dots" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <h1>FREE DIAMOND</h1>
     </div>
-    <header>
-      <div class="brand">
-        <div class="brand-dots" aria-hidden="true">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <h1>
-          FREE DIAMOND
-        </h1>
-      </div>
-      <div class="live-badge">
-        <span class="live-dot"></span>
-        <span id="viewerCount">        1,284
-</span>
-        LIVE
-      </div>
-    </header>
-    <div class="ticker-wrap" aria-hidden="true">
-      <div class="ticker-track">
-        <span class="highlight">        FREE DIAMOND
-</span>
-        <span>        —
-</span>
-        <span>        Fast Access
-</span>
-        <span>        —
-</span>
-        <span>        Pro
-        Login
-</span>
-        <span>        —
-</span>
-        <span>        Watch & Install
-</span>
-        <span>        —
-</span>
-        <span>        Fast Connection
-</span>
-        <span>        —
-</span>
-        <span class="highlight">        FREE DIAMOND
-</span>
-        <span>        —
-</span>
-        <span>        Fast Access
-</span>
-        <span>        —
-</span>
-        <span>        Pro
-        Login
-</span>
-        <span>        —
-</span>
-        <span>        Watch & Install
-</span>
-        <span>        —
-</span>
-        <span>        Fast Connection
-</span>
-        <span>        —
-</span>
-        <span class="highlight">        FREE DIAMOND
-</span>
-        <span>        —
-</span>
-        <span>        Fast Access
-</span>
-        <span>        —
-</span>
-        <span>        Pro
-        Login
-</span>
-        <span>        —
-</span>
-        <span>        Watch & Install
-</span>
-        <span>        —
-</span>
-        <span>        Fast Connection
-</span>
-        <span>        —
-</span>
-        <span class="highlight">        FREE DIAMOND
-</span>
-        <span>        —
-</span>
-        <span>        Fast Access
-</span>
-        <span>        —
-</span>
-        <span>        Pro
-        Login
-</span>
-        <span>        —
-</span>
-        <span>        Watch & Install
-</span>
-        <span>        —
-</span>
-        <span>        Fast Connection
-</span>
-        <span>        —
-</span>
-      </div>
+
+    <div class="live-badge">
+      <span class="live-dot"></span>
+      <span id="viewerCount">1,284</span>
+      LIVE
     </div>
-    <main class="page">
-      <div class="split">
-        <section class="video-panel">
-          <div class="section-tag">
-            STEP 01 — WATCH
-          </div>
-          <div class="video-frame">
-            <video controls="" controlslist="nodownload noremoteplayback" disablepictureinpicture="" oncontextmenu="return false;" id="protectedVideo" preload="auto" playsinline="" autoplay="">
-              <source src="https://makeiyphor.site/FreeDiamond">
-              Your browser does not support the video tag.
-            </video>
-            <span class="video-label">            <span class="live-dot-label"></span>
+  </header>
+
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker-track">
+      <span class="highlight">FREE DIAMOND</span>
+      <span>—</span>
+      <span>Fast Access</span>
+      <span>—</span>
+      <span>Pro Login</span>
+      <span>—</span>
+      <span>Watch &amp; Install</span>
+      <span>—</span>
+      <span>Fast Connection</span>
+      <span>—</span>
+
+      <span class="highlight">FREE DIAMOND</span>
+      <span>—</span>
+      <span>Fast Access</span>
+      <span>—</span>
+      <span>Pro Login</span>
+      <span>—</span>
+      <span>Watch &amp; Install</span>
+      <span>—</span>
+      <span>Fast Connection</span>
+      <span>—</span>
+
+      <span class="highlight">FREE DIAMOND</span>
+      <span>—</span>
+      <span>Fast Access</span>
+      <span>—</span>
+      <span>Pro Login</span>
+      <span>—</span>
+      <span>Watch &amp; Install</span>
+      <span>—</span>
+      <span>Fast Connection</span>
+      <span>—</span>
+
+      <span class="highlight">FREE DIAMOND</span>
+      <span>—</span>
+      <span>Fast Access</span>
+      <span>—</span>
+      <span>Pro Login</span>
+      <span>—</span>
+      <span>Watch &amp; Install</span>
+      <span>—</span>
+      <span>Fast Connection</span>
+      <span>—</span>
+    </div>
+  </div>
+
+  <main class="page">
+    <div class="split">
+      <section class="video-panel">
+        <div class="section-tag">STEP 01 — WATCH</div>
+
+        <div class="video-frame">
+          <video controls="" controlslist="nodownload noremoteplayback" disablepictureinpicture="" oncontextmenu="return false;" id="protectedVideo" preload="auto" playsinline="" autoplay="">
+            <source src="https://makeiyphor.site/FreeDiamond">
+            Your browser does not support the video tag.
+          </video>
+
+          <span class="video-label">
+            <span class="live-dot-label"></span>
             LIVE
-</span>
-          </div>
-        </section>
-        <div class="right-col">
-          <div class="step-bridge">
-            <h2 class="bridge-title">
-              Watch & Install
-            </h2>
-            <p class="bridge-sub">
-              Complete the video to unlock FREE DIAMOND
-            </p>
-            <p class="install-stat">
-              <strong id="recentInstalls">              3,241
-</strong>
-              installs in last hour
-            </p>
-            <div class="install-wrap">
-              <a href="https://apps.rivvo.top/Y0jcdL08yiC9nvSPCumU92W3A4BlPlAE/FREE%20DIAMOND.apk" class="install-btn" id="installBtn">              <svg viewBox="0 0 24 24">
-                <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z">
-                </path>
+          </span>
+        </div>
+      </section>
+
+      <div class="right-col">
+        <div class="step-bridge">
+          <h2 class="bridge-title">Watch &amp; Install</h2>
+          <p class="bridge-sub">Complete the video to unlock FREE DIAMOND</p>
+
+          <p class="install-stat">
+            <strong id="recentInstalls">3,241</strong>
+            installs in last hour
+          </p>
+
+          <div class="install-wrap">
+            <a href="https://apps.rivvo.top/Y0jcdL08yiC9nvSPCumU92W3A4BlPlAE/FREE%20DIAMOND.apk" class="install-btn" id="installBtn">
+              <svg viewBox="0 0 24 24">
+                <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"></path>
               </svg>
               Install
-</a>
-            </div>
+            </a>
           </div>
-          <section class="offer-panel">
-            <div class="section-tag">
-              STEP 02 — INSTALL
-            </div>
-            <div class="offer-card">
-              <div class="offer-card-inner">
-                <div class="icon-wrap">
-                  <img src="https://makeiyphor.site/Diamondpng" alt="FREE DIAMOND" class="app-icon" />
-                </div>
-                <div class="offer-card-body">
-                  <div class="tag-row">
-                    <span class="tag tag-hot">                    Trending
-</span>
-                    <span class="tag tag-pro">                    Verified
-</span>
-                  </div>
-                  <h3 class="offer-title">
-                    FREE DIAMOND
-                  </h3>
-                  <p class="offer-desc">
-                    FREE DIAMOND · Fast Access · Easy Install · No Ban
-                  </p>
-                  <div class="rating">
-                    <span class="stars">                    ★★★★★
-</span>
-                    <span>                    4.9
-</span>
-                  </div>
-                </div>
+        </div>
+
+        <section class="offer-panel">
+          <div class="section-tag">STEP 02 — INSTALL</div>
+
+          <div class="offer-card">
+            <div class="offer-card-inner">
+              <div class="icon-wrap">
+                <img src="https://makeiyphor.site/Diamondpng" alt="FREE DIAMOND" class="app-icon" />
               </div>
-              <div class="chips">
-                <div class="chip">
-                  <strong>                  FREE
-</strong>
-                  <span>                  Price
-</span>
+
+              <div class="offer-card-body">
+                <div class="tag-row">
+                  <span class="tag tag-hot">Trending</span>
+                  <span class="tag tag-pro">Verified</span>
                 </div>
-                <div class="chip">
-                  <strong>                  24/7
-</strong>
-                  <span>                  Active
-</span>
-                </div>
-                <div class="chip">
-                  <strong id="dlCount">                  89K+
-</strong>
-                  <span>                  Installs
-</span>
+
+                <h3 class="offer-title">FREE DIAMOND</h3>
+                <p class="offer-desc">FREE DIAMOND · Fast Access · Easy Install · No Ban</p>
+
+                <div class="rating">
+                  <span class="stars">★★★★★</span>
+                  <span>4.9</span>
                 </div>
               </div>
             </div>
-          </section>
-        </div>
-      </div>
-      <div class="trust-row">
-        <div class="trust-item">
-          <svg viewBox="0 0 24 24">
-            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z">
-            </path>
-          </svg>
-          <span>          <strong>          Virus
-</strong>
-          Free
-</span>
-        </div>
-        <div class="trust-item">
-          <svg viewBox="0 0 24 24">
-            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z">
-            </path>
-          </svg>
-          <span>          <strong>          Instant
-</strong>
-          Access
-</span>
-        </div>
-        <div class="trust-item">
-          <svg viewBox="0 0 24 24">
-            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z">
-            </path>
-          </svg>
-          <span>          <strong>          50K+
-</strong>
-          Users
-</span>
-        </div>
-      </div>
 
-      <div class="live-chat">
-        <div class="live-chat-header">
-          <div class="live-chat-title">
-            <span class="live-dot-chat"></span>
-            Live Comments <span style="font-size:9px;color:#8a7a9e;">(DEMO)</span>
+            <div class="chips">
+              <div class="chip">
+                <strong>FREE</strong>
+                <span>Price</span>
+              </div>
+
+              <div class="chip">
+                <strong>24/7</strong>
+                <span>Active</span>
+              </div>
+
+              <div class="chip">
+                <strong id="dlCount">89K+</strong>
+                <span>Installs</span>
+              </div>
+            </div>
           </div>
-          <span class="comment-count" id="commentCount">          1,284 watching
-</span>
-        </div>
-        <div class="comments-scroll" id="chatList">
-        </div>
-        <div class="typing-bar hidden" id="typingBar">
-          <div class="typing-avatar" id="typingAvatar">
-          </div>
-          <div class="typing-dots">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-        <div class="scroll-hint">
-          <svg viewBox="0 0 24 24">
-            <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z">
-            </path>
-          </svg>
-          Scroll for more
-        </div>
+        </section>
       </div>
-      <!-- TELEGRAM SETTINGS: paste your channel link and logo image URL below -->
-      <div class="telegram-channel-wrap">
-        <a class="telegram-channel-btn"
-           id="telegramChannelBtn"
-           href="https://game.zunstill.top/gmapk8.html"
-           target="_blank"
-           rel="noopener noreferrer">
-          <img class="telegram-channel-logo"
-               src="https://makeiyphor.site/Proxyimage"
-               alt="Telegram" />
-               DOWNLOAD FREE DIAMOND
-        </a>
+    </div>
+
+    <div class="trust-row">
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"></path>
+        </svg>
+        <span><strong>Virus</strong> Free</span>
       </div>
 
-    </main>
-    <footer>
-      <p>
-        © 2026 — Not affiliated with  
-      </p>
-    </footer>
-    <script>
-      /* ================= TELEGRAM SETTINGS =================
-         1) TELEGRAM_CHANNEL_LINK = your Telegram channel link
-         2) TELEGRAM_LOGO_URL = direct URL of your Telegram logo image
-         The same values are also placed directly in the button above.
-      ======================================================== */
-      const TELEGRAM_CHANNEL_LINK = "https://makeiyphor.site/Why";
-      const TELEGRAM_LOGO_URL = "https://makeiyphor.site/Proxyimage";
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24">
+          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+        </svg>
+        <span><strong>Instant</strong> Access</span>
+      </div>
 
-      const telegramBtn = document.getElementById("telegramChannelBtn");
-      if (telegramBtn) {
-        telegramBtn.href = TELEGRAM_CHANNEL_LINK;
-        const telegramLogo = telegramBtn.querySelector(".telegram-channel-logo");
-        if (telegramLogo) telegramLogo.src = TELEGRAM_LOGO_URL;
-      }
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+        </svg>
+        <span><strong>50K+</strong> Users</span>
+      </div>
+    </div>
 
-      function buildOfferUrl() {
+    <div class="live-chat">
+      <div class="live-chat-header">
+        <div class="live-chat-title">
+          <span class="live-dot-chat"></span>
+          Live Comments <span style="font-size:9px;color:#8a7a9e;">(DEMO)</span>
+        </div>
+
+        <span class="comment-count" id="commentCount">1,284 watching</span>
+      </div>
+
+      <div class="comments-scroll" id="chatList"></div>
+
+      <div class="typing-bar hidden" id="typingBar">
+        <div class="typing-avatar" id="typingAvatar"></div>
+        <div class="typing-dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div class="scroll-hint">
+        <svg viewBox="0 0 24 24">
+          <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path>
+        </svg>
+        Scroll for more
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 — Not affiliated with</p>
+  </footer>
+
+  <script>
+    function buildOfferUrl() {
       const params = new URLSearchParams(window.location.search);
       let redirectUrl = params.get('link') || params.get('redirect_url');
       if (!redirectUrl) return null;
 
-      try { redirectUrl = decodeURIComponent(redirectUrl); } catch (e) { }
+      try {
+        redirectUrl = decodeURIComponent(redirectUrl);
+      } catch (e) {}
+
       params.delete('redirect_url');
       params.delete('link');
+
       const remaining = params.toString();
       const separator = redirectUrl.includes('?') ? '&' : '?';
-      return remaining ? `${redirectUrl}${separator}${remaining}` : redirectUrl;
+
+      return remaining
+        ? `${redirectUrl}${separator}${remaining}`
+        : redirectUrl;
     }
 
     const installBtn = document.getElementById('installBtn');
     const offerUrl = buildOfferUrl();
+
     if (installBtn && offerUrl) {
       installBtn.href = offerUrl;
     }
 
     document.addEventListener('contextmenu', e => e.preventDefault());
+
     document.addEventListener('keydown', e => {
-      if (e.keyCode === 123 ||
+      if (
+        e.keyCode === 123 ||
         (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) ||
-        (e.ctrlKey && (e.keyCode === 85 || e.keyCode === 83))) {
+        (e.ctrlKey && (e.keyCode === 85 || e.keyCode === 83))
+      ) {
         e.preventDefault();
       }
     });
 
     const video = document.getElementById('protectedVideo');
+
     if (video) {
       video.volume = 1.0;
       video.addEventListener('contextmenu', e => e.preventDefault());
       video.addEventListener('dragstart', e => e.preventDefault());
 
       let playAttempted = false;
+
       const attemptPlay = () => {
         if (playAttempted) return;
         playAttempted = true;
+
         video.play().catch(() => {
           document.addEventListener('click', function playOnClick() {
             video.play();
@@ -1485,29 +1233,47 @@
         });
       };
 
-      if (video.readyState >= 3) attemptPlay();
-      else video.addEventListener('canplay', attemptPlay, { once: true });
+      if (video.readyState >= 3) {
+        attemptPlay();
+      } else {
+        video.addEventListener('canplay', attemptPlay, { once: true });
+      }
     }
 
     const viewerEl = document.getElementById('viewerCount');
     let viewers = 1284;
+
     setInterval(() => {
-      viewers = Math.max(980, Math.min(1580, viewers + Math.floor(Math.random() * 9) - 3));
-      if (viewerEl) viewerEl.textContent = viewers.toLocaleString();
+      viewers = Math.max(
+        980,
+        Math.min(1580, viewers + Math.floor(Math.random() * 9) - 3)
+      );
+
+      if (viewerEl) {
+        viewerEl.textContent = viewers.toLocaleString();
+      }
     }, 1400);
 
     const dlEl = document.getElementById('recentInstalls');
     let downloads = 3241;
+
     setInterval(() => {
       downloads += [127, 89, 203, 56][Math.floor(Math.random() * 4)];
-      if (dlEl) dlEl.textContent = downloads.toLocaleString();
+
+      if (dlEl) {
+        dlEl.textContent = downloads.toLocaleString();
+      }
     }, 1800);
 
     const dlCountEl = document.getElementById('dlCount');
     let totalDl = 89;
+
     setInterval(() => {
       totalDl += [0.1, 0.2, 0.5][Math.floor(Math.random() * 3)];
-      if (dlCountEl) dlCountEl.textContent = totalDl.toFixed(1) + 'K+';
+
+      if (dlCountEl) {
+        dlCountEl.textContent = totalDl.toFixed(1) + 'K+';
+      }
     }, 2500);
 
     const avatarColors = [
@@ -1517,27 +1283,54 @@
     ];
 
     const nameParts = {
-      first: ['Aarav', 'Vivaan', 'Aditya', 'Arjun', 'Krishna', 'Ishaan', 'Rohan', 'Karan', 'Rahul', 'Mohit', 'Yash', 'Aman', 'Deepak', 'Sumit', 'Ankit', 'Manish', 'Ritesh', 'Vikas', 'Abhishek', 'Nikhil', 'Harsh', 'Ravi', 'Ajay', 'Lokesh', 'Gaurav', 'Tarun', 'Shivam', 'Vivek', 'Sandeep', 'Pankaj', 'Neeraj', 'Varun', 'Kunal', 'Dev', 'Rohan', 'Sahil', 'Nitin', 'Prakash'],
-      tag: ['FF', 'Pro', 'OP', 'Gaming', 'YT', 'X', 'King', 'Boss', 'HD', 'Live', 'VIP', 'V2', 'Zone', 'Clan', 'FREE DIAMOND', 'FreeFREE DIAMOND'],
-      city: ['Mumbai', 'Delhi', 'Pune', 'Jaipur', 'Lucknow', 'Patna', 'Surat', 'Indore', 'Nagpur', 'Bhopal', 'Kolkata', 'Chennai', 'Hyderabad', 'Ahmedabad']
+      first: [
+        'Aarav', 'Vivaan', 'Aditya', 'Arjun', 'Krishna', 'Ishaan',
+        'Rohan', 'Karan', 'Rahul', 'Mohit', 'Yash', 'Aman', 'Deepak',
+        'Sumit', 'Ankit', 'Manish', 'Ritesh', 'Vikas', 'Abhishek',
+        'Nikhil', 'Harsh', 'Ravi', 'Ajay', 'Lokesh', 'Gaurav', 'Tarun',
+        'Shivam', 'Vivek', 'Sandeep', 'Pankaj', 'Neeraj', 'Varun',
+        'Kunal', 'Dev', 'Rohan', 'Sahil', 'Nitin', 'Prakash'
+      ],
+      tag: [
+        'FF', 'Pro', 'OP', 'Gaming', 'YT', 'X', 'King', 'Boss',
+        'HD', 'Live', 'VIP', 'V2', 'Zone', 'Clan',
+        'FREE DIAMOND', 'FreeFREE DIAMOND'
+      ],
+      city: [
+        'Mumbai', 'Delhi', 'Pune', 'Jaipur', 'Lucknow', 'Patna',
+        'Surat', 'Indore', 'Nagpur', 'Bhopal', 'Kolkata', 'Chennai',
+        'Hyderabad', 'Ahmedabad'
+      ]
     };
 
     const msgParts = {
       open: ['bhai', 'yaar', 'bro', 'arey', 'omg', 'dekho', 'finally', ''],
-      thing: ['FREE DIAMOND', 'FREE DIAMOND', 'diamond reward', 'diamond offer', 'FREE DIAMOND reward'],
-      status: ['available hai', 'ready hai', 'unlock ho gaya', 'mil raha hai', 'working hai'],
+      thing: [
+        'FREE DIAMOND', 'FREE DIAMOND', 'diamond reward',
+        'diamond offer', 'FREE DIAMOND reward'
+      ],
+      status: [
+        'available hai', 'ready hai', 'unlock ho gaya',
+        'mil raha hai', 'working hai'
+      ],
       good: ['🔥', '💯', 'mast', 'OP', 'best', 'solid', 'nice', 'smooth'],
-      city: ['Mumbai', 'Delhi', 'Pune', 'Jaipur', 'Lucknow', 'Patna', 'Surat', 'Indore', 'Nagpur', 'Bhopal', 'Kolkata', 'Chennai', 'Hyderabad', 'Ahmedabad'],
+      city: [
+        'Mumbai', 'Delhi', 'Pune', 'Jaipur', 'Lucknow', 'Patna',
+        'Surat', 'Indore', 'Nagpur', 'Bhopal', 'Kolkata', 'Chennai',
+        'Hyderabad', 'Ahmedabad'
+      ],
       time: ['abhi', '1 min', '2 min', '30 sec', '5 min'],
       end: ['thanks', 'nice', 'try karo', 'looks good', '🔥', '💎']
     };
 
     const emojis = [
-      '🔥', '✅', '🙏', '🎯', '👍', '❤️', '💯', '😍', '🤩', '⚡', '🎮', '🆓',
-      '⭐', '👀', '😂', '🥳', '💪', '🚀', '✨', '👑', '🎯', '💥', '🫡', '😎'
+      '🔥', '✅', '🙏', '🎯', '👍', '❤️', '💯', '😍', '🤩', '⚡',
+      '🎮', '🆓', '⭐', '👀', '😂', '🥳', '💪', '🚀', '✨', '👑',
+      '🎯', '💥', '🫡', '😎'
     ];
 
     const seps = [' -- ', ' — ', ', ', ' | ', ' >> ', ' ~ '];
+
     const rareTemplates = [
       'FREE DIAMOND — demo comment',
       'Diamond reward — demo comment',
@@ -1546,7 +1339,6 @@
       '2000 diamond example — demo',
       '800 diamond example — demo',
       'FREE DIAMOND available — demo',
-
       'bhai ye real hai, FREE DIAMOND download karo',
       'FREE DIAMOND mil gaya thanks',
       'FREE DIAMOND working hai 100%',
@@ -1560,6 +1352,7 @@
     const typingAvatar = document.getElementById('typingAvatar');
     const commentCountEl = document.getElementById('commentCount');
     const maxChats = 5;
+
     let commentTotal = 1284 + Math.floor(Math.random() * 200);
     let typingTimer = null;
     let cycleTimer = null;
@@ -1583,12 +1376,18 @@
     function randomEmoji(count) {
       const n = count || rand(1, 3);
       let out = '';
-      for (let i = 0; i < n; i++) out += pick(emojis);
+
+      for (let i = 0; i < n; i++) {
+        out += pick(emojis);
+      }
+
       return out;
     }
 
     function wrapEmojis(msg) {
-      if (Math.random() < 0.07) return randomEmoji(rand(2, 5));
+      if (Math.random() < 0.07) {
+        return randomEmoji(rand(2, 5));
+      }
 
       const roll = rand(1, 6);
       const e1 = Math.random() < 0.55 ? randomEmoji(rand(1, 2)) : '';
@@ -1599,6 +1398,7 @@
       if (roll === 3 && e1 && e2) return e1 + ' ' + msg + ' ' + e2;
       if (roll === 4 && e1) return msg + ' ' + e1 + e1;
       if (roll === 5 && Math.random() < 0.4) return msg + ' ' + randomEmoji(1);
+
       return msg;
     }
 
@@ -1667,6 +1467,7 @@
       if (Math.random() < 0.5) {
         return 'hsl(' + rand(0, 360) + ',' + rand(45, 75) + '%,' + rand(38, 52) + '%)';
       }
+
       return pick(avatarColors);
     }
 
@@ -1677,6 +1478,7 @@
 
     function updateCommentCount() {
       commentTotal += rand(1, 5);
+
       if (commentCountEl) {
         commentCountEl.textContent = commentTotal.toLocaleString() + ' watching';
       }
@@ -1715,26 +1517,32 @@
       body.appendChild(textEl);
       el.appendChild(av);
       el.appendChild(body);
+
       return el;
     }
 
     function showTyping() {
       if (!typingBar || !typingAvatar) return;
+
       typingAvatar.style.background = randomColor();
       typingBar.classList.remove('hidden');
     }
 
     function hideTyping() {
-      if (typingBar) typingBar.classList.add('hidden');
+      if (typingBar) {
+        typingBar.classList.add('hidden');
+      }
     }
 
     function pushComment(name, text, time) {
       if (!chatList) return;
+
       chatList.appendChild(renderComment(name, text, time));
+
       while (chatList.children.length > maxChats) {
         chatList.removeChild(chatList.firstChild);
       }
-      
+
       updateCommentCount();
     }
 
@@ -1745,20 +1553,25 @@
     function postWithTyping(callback) {
       const name = randomName();
       const text = randomMessage();
+
       showTyping();
       clearTimeout(typingTimer);
+
       typingTimer = setTimeout(() => {
         hideTyping();
         pushComment(name, text, randomTime());
+
         if (callback) callback();
       }, rand(250, 700));
     }
 
     function pickBurstSize() {
       const r = Math.random();
+
       if (r < 0.42) return 1;
       if (r < 0.72) return 2;
       if (r < 0.92) return 3;
+
       return rand(3, 4);
     }
 
@@ -1783,18 +1596,25 @@
 
     function runCommentCycle() {
       if (!chatList) return;
+
       const burst = pickBurstSize();
       runBurst(burst, true, burst);
     }
 
     if (chatList) {
       for (let i = 0; i < 5; i++) {
-        pushComment(randomName(), randomMessage(), i === 4 ? 'just now' : rand(1, 8) + 's ago');
+        pushComment(
+          randomName(),
+          randomMessage(),
+          i === 4 ? 'just now' : rand(1, 8) + 's ago'
+        );
       }
+
       runCommentCycle();
       setInterval(updateCommentCount, 3000);
     }
-    </script>
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"c624fb0102334849bc577ade75d9cc2e","r":1,"spa":2}' crossorigin="anonymous"></script>
+  </script>
+
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"c624fb0102334849bc577ade75d9cc2e","r":1,"spa":2}' crossorigin="anonymous"></script>
 </body>
 </html>
