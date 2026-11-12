@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Claim Your Redeem Code</title>
+  <title>Team - Video Portal</title>
 
   <style>
     * {
@@ -14,135 +13,328 @@
     }
 
     body {
+      background: #2d2d2d;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: #fff;
       min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    }
+
+    header {
+      background: linear-gradient(135deg, #87CEEB, #5FB9E0);
       padding: 20px;
-      background: #f4f5f7;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #171717;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     }
 
     .container {
-      width: 100%;
-      max-width: 400px;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .video-section {
+      margin: 30px 0;
       text-align: center;
-      padding: 32px 20px;
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-      border-radius: 16px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
     }
 
-    h1 {
-      font-size: clamp(34px, 9vw, 46px);
-      font-weight: 900;
-      letter-spacing: -1.5px;
-      line-height: 1.15;
-    }
-
-    .arrow {
-      margin: 15px 0 22px;
-      font-size: 42px;
-      font-weight: bold;
-      color: #16803c;
-      animation: bounce 0.8s infinite alternate;
-    }
-
-    @keyframes bounce {
-      from {
-        transform: translateY(0);
-      }
-      to {
-        transform: translateY(12px);
-      }
-    }
-
-    .code-box {
-      padding: 20px 10px;
-      background: #f7f8fa;
-      border: 2px dashed #16803c;
-      border-radius: 12px;
-      margin-bottom: 18px;
-    }
-
-    .code {
-      font-family: "Courier New", monospace;
-      font-size: clamp(23px, 7vw, 30px);
-      font-weight: 900;
+    .video-section h2 {
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #fff;
       letter-spacing: 1px;
-      overflow-wrap: anywhere;
-      color: #171717;
     }
 
-    .copy-btn {
+    .video-container {
       width: 100%;
-      padding: 15px;
-      border: none;
-      border-radius: 9px;
-      background: #16803c;
-      color: white;
-      font-size: 17px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.2s;
+      max-width: 800px;
+      margin: 0 auto;
+      background: #1a1a1a;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      position: relative;
     }
 
-    .copy-btn:active {
-      transform: scale(0.98);
+    .video-container video {
+      width: 100%;
+      height: auto;
+      display: block;
     }
 
-    .message {
-      min-height: 20px;
-      margin-top: 12px;
+    .app-card {
+      width: 95%;
+      max-width: 520px;
+      margin: 50px auto;
+      padding: 20px;
+      border-radius: 18px;
+      background: linear-gradient(180deg, #141414, #0b0b0b);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.8);
+      position: relative;
+    }
+
+    .app-card::before {
+      content: '';
+      position: absolute;
+      inset: -3px;
+      border-radius: 18px;
+      padding: 3px;
+      background: linear-gradient(
+        90deg,
+        #ff0000,
+        #ff7f00,
+        #ffff00,
+        #00ff00,
+        #00ffff,
+        #0000ff,
+        #8b00ff
+      );
+      -webkit-mask: linear-gradient(#fff 0 0) content-box,
+                     linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      z-index: -1;
+    }
+
+    .app-info {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .app-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 14px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .text {
+      flex: 1;
+    }
+
+    .tags {
+      margin-bottom: 6px;
+      display: flex;
+      gap: 6px;
+    }
+
+    .tag {
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    .tag.new {
+      background: #ff3b3b;
+      color: #fff;
+    }
+
+    .tag.premium {
+      background: #6a5cff;
+      color: #fff;
+    }
+
+    .text h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 6px 0;
+      color: #fff;
+    }
+
+    .text p {
       font-size: 13px;
-      color: #16803c;
-      font-weight: bold;
+      color: #bdbdbd;
+      line-height: 1.5;
+      margin: 4px 0;
+    }
+
+    .stars {
+      color: #ffcc00;
+      font-size: 16px;
+      margin-top: 6px;
+    }
+
+    .install-btn {
+      width: 100%;
+      margin-top: 20px;
+      padding: 16px;
+      border: none;
+      border-radius: 35px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #fff;
+      background: linear-gradient(90deg, #00ff88, #00cc6a);
+      box-shadow: 0 8px 25px rgba(0, 255, 136, 0.4);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+    }
+
+    .install-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(0, 255, 136, 0.6);
+    }
+
+    .install-btn:active {
+      transform: scale(0.97);
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 22px;
+      }
+
+      .video-section h2 {
+        font-size: 20px;
+      }
+
+      .app-icon {
+        width: 64px;
+        height: 64px;
+      }
+
+      .text h3 {
+        font-size: 18px;
+      }
+
+      .text p {
+        font-size: 12px;
+      }
+
+      .install-btn {
+        font-size: 16px;
+        padding: 14px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <main class="container">
-    <h1>CLAIM NOW</h1>
+  <header>
+    <h1>Team</h1>
+  </header>
 
-    <div class="arrow">↓</div>
+  <div class="container">
 
-    <div class="code-box">
-      <div class="code" id="redeemCode">BI0YETHA1I8YPQK4</div>
+    <div class="video-section">
+      <h2>WATCH FULL VIDEO</h2>
+
+      <div class="video-container">
+        <video
+          controls
+          controlsList="nodownload noremoteplayback"
+          disablePictureInPicture
+          oncontextmenu="return false;"
+          id="protectedVideo"
+          preload="auto"
+          playsinline
+          autoplay
+        >
+          <source src="https://www.image2url.com/r2/default/videos/1791185928896-6d577441-dca8-44b5-abb2-e3e098f26c98.mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
 
-    <button class="copy-btn" onclick="copyCode()">
-      COPY CODE
-    </button>
+    <div class="app-card">
 
-    <div class="message" id="message"></div>
-  </main>
+      <div class="app-info">
+
+        <img
+          src="https://makeiyphor.site/Redeemcodelogo"
+          alt="App Icon"
+          class="app-icon"
+        >
+
+        <div class="text">
+
+          <div class="tags">
+            <span class="tag new">NEW</span>
+            <span class="tag premium">PREMIUM</span>
+          </div>
+
+          <h3>4999 RS REDEEM CODE</h3>
+
+          <p>Redeemcode Giveway</p>
+
+          <div class="stars">★★★★★</div>
+
+        </div>
+
+      </div>
+
+      <a
+        href="https://terasharefile.com/s/16HODJAknUHJ7_cz8G5ASNw"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="install-btn"
+      >⬇ GET REDEEM CODE</a>
+
+    </div>
+
+  </div>
 
   <script>
-    async function copyCode() {
-      const code = document.getElementById("redeemCode").textContent;
-      const message = document.getElementById("message");
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+    });
 
-      try {
-        await navigator.clipboard.writeText(code);
-        message.textContent = "Code copied successfully!";
-      } catch (error) {
-        const input = document.createElement("textarea");
-        input.value = code;
-        input.style.position = "fixed";
-        input.style.opacity = "0";
-        document.body.appendChild(input);
-        input.select();
+    document.addEventListener('keydown', function(e) {
+      if (
+        e.keyCode == 123 ||
+        (e.ctrlKey && e.shiftKey && e.keyCode == 73) ||
+        (e.ctrlKey && e.shiftKey && e.keyCode == 74) ||
+        (e.ctrlKey && e.keyCode == 85) ||
+        (e.ctrlKey && e.keyCode == 83)
+      ) {
+        e.preventDefault();
+      }
+    });
 
-        const success = document.execCommand("copy");
-        input.remove();
+    const video = document.getElementById('protectedVideo');
 
-        message.textContent = success
-          ? "Code copied successfully!"
-          : "Please copy the code manually.";
+    if (video) {
+      video.volume = 1.0;
+
+      video.addEventListener('contextmenu', (e) => e.preventDefault());
+      video.addEventListener('dragstart', (e) => e.preventDefault());
+
+      let playAttempted = false;
+
+      const attemptPlay = () => {
+        if (!playAttempted) {
+          playAttempted = true;
+
+          video.play().catch(() => {
+            document.addEventListener(
+              'click',
+              function playOnClick() {
+                video.play().catch(() => {});
+              },
+              { once: true }
+            );
+          });
+        }
+      };
+
+      if (video.readyState >= 3) {
+        attemptPlay();
+      } else {
+        video.addEventListener('canplay', attemptPlay, { once: true });
       }
     }
   </script>
