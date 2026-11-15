@@ -1,343 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Team - Video Portal</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FREE REDEEM CODE</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
 
-    body {
-      background: #2d2d2d;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      color: #fff;
-      min-height: 100vh;
-    }
+body{
+  min-height:100vh;
+  font-family:Arial,sans-serif;
+  color:white;
+  text-align:center;
+  background:
+  radial-gradient(circle at 50% 20%,#1639a0,transparent 45%),
+  radial-gradient(circle at 10% 60%,#7200c7,transparent 40%),
+  linear-gradient(160deg,#02051c,#090329,#02051c);
+  overflow-x:hidden;
+}
 
-    header {
-      background: linear-gradient(135deg, #87CEEB, #5FB9E0);
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    }
+.container{
+  max-width:600px;
+  margin:auto;
+  padding:18px 14px 40px;
+}
 
-    header h1 {
-      font-size: 28px;
-      font-weight: 700;
-      color: #fff;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    }
+.top{
+  display:flex;
+  justify-content:space-between;
+  font-size:48px;
+}
 
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-    }
+.crown{
+  font-size:65px;
+  filter:drop-shadow(0 0 15px gold);
+}
 
-    .video-section {
-      margin: 30px 0;
-      text-align: center;
-    }
+h1{
+  font-size:clamp(48px,13vw,85px);
+  font-weight:1000;
+  font-style:italic;
+  color:white;
+  -webkit-text-stroke:2px red;
+  text-shadow:0 5px 0 #760000,0 0 20px red;
+}
 
-    .video-section h2 {
-      font-size: 26px;
-      font-weight: 700;
-      margin-bottom: 20px;
-      color: #fff;
-      letter-spacing: 1px;
-    }
+h2{
+  font-size:clamp(32px,9vw,62px);
+  color:#ffe600;
+  font-weight:1000;
+  font-style:italic;
+  margin-top:12px;
+  text-shadow:0 4px 0 #9d2500,0 0 20px orange;
+}
 
-    .video-container {
-      width: 100%;
-      max-width: 800px;
-      margin: 0 auto;
-      background: #1a1a1a;
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-      position: relative;
-    }
+.heading{
+  padding:15px 0 25px;
+  border-bottom:5px solid #ff22db;
+  box-shadow:0 10px 25px #a000ff;
+}
 
-    .video-container video {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
+.counter-box{
+  margin:30px 0;
+  padding:20px 8px;
+  border:4px solid #f500ff;
+  border-radius:30px;
+  background:#100b35;
+  box-shadow:0 0 15px #ff00ff,0 0 30px #a000ff;
+}
 
-    .app-card {
-      width: 95%;
-      max-width: 520px;
-      margin: 50px auto;
-      padding: 20px;
-      border-radius: 18px;
-      background: linear-gradient(180deg, #141414, #0b0b0b);
-      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.8);
-      position: relative;
-    }
+.counter{
+  font-size:clamp(55px,14vw,85px);
+  font-weight:1000;
+  color:#ffe000;
+  text-shadow:0 4px 0 #9b4c00,0 0 20px orange;
+}
 
-    .app-card::before {
-      content: '';
-      position: absolute;
-      inset: -3px;
-      border-radius: 18px;
-      padding: 3px;
-      background: linear-gradient(
-        90deg,
-        #ff0000,
-        #ff7f00,
-        #ffff00,
-        #00ff00,
-        #00ffff,
-        #0000ff,
-        #8b00ff
-      );
-      -webkit-mask: linear-gradient(#fff 0 0) content-box,
-                     linear-gradient(#fff 0 0);
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
-      z-index: -1;
-    }
+.claimed{
+  font-size:clamp(20px,5vw,32px);
+  font-weight:900;
+  font-style:italic;
+}
 
-    .app-info {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
+/* THREE GOOGLE PLAY GIFT CARDS */
 
-    .app-icon {
-      width: 80px;
-      height: 80px;
-      border-radius: 14px;
-      object-fit: cover;
-      flex-shrink: 0;
-    }
+.cards{
+  position:relative;
+  width:100%;
+  height:320px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:15px auto;
+}
 
-    .text {
-      flex: 1;
-    }
+.gift-card{
+  position:absolute;
+  width:58%;
+  height:290px;
+  object-fit:contain;
+  border-radius:15px;
+  filter:drop-shadow(0 8px 15px rgba(0,0,0,.6));
+}
 
-    .tags {
-      margin-bottom: 6px;
-      display: flex;
-      gap: 6px;
-    }
+.gift-left{
+  transform:translate(-65px,12px) rotate(-9deg) scale(.86);
+  z-index:1;
+}
 
-    .tag {
-      font-size: 11px;
-      padding: 4px 10px;
-      border-radius: 12px;
-      font-weight: 600;
-      display: inline-block;
-    }
+.gift-right{
+  transform:translate(65px,12px) rotate(9deg) scale(.86);
+  z-index:1;
+}
 
-    .tag.new {
-      background: #ff3b3b;
-      color: #fff;
-    }
+.gift-center{
+  transform:translateY(-5px) scale(1);
+  z-index:3;
+}
 
-    .tag.premium {
-      background: #6a5cff;
-      color: #fff;
-    }
+/* ARROW */
 
-    .text h3 {
-      font-size: 20px;
-      font-weight: 600;
-      margin: 6px 0;
-      color: #fff;
-    }
+.arrow{
+  font-size:75px;
+  color:red;
+  text-shadow:0 0 15px red,0 0 8px white;
+  margin:-5px auto;
+}
 
-    .text p {
-      font-size: 13px;
-      color: #bdbdbd;
-      line-height: 1.5;
-      margin: 4px 0;
-    }
+/* CLICK BUTTON */
 
-    .stars {
-      color: #ffcc00;
-      font-size: 16px;
-      margin-top: 6px;
-    }
+.button{
+  display:block;
+  text-decoration:none;
+  background:linear-gradient(#fff94a,#ffdb00,#ffb900);
+  color:black;
+  font-size:clamp(38px,10vw,60px);
+  font-weight:1000;
+  font-style:italic;
+  padding:20px 5px;
+  border-radius:100px;
+  border:5px solid white;
+  outline:4px solid red;
+  box-shadow:0 0 20px yellow,0 12px 0 #a52a00;
+  transition:.2s;
+}
 
-    .install-btn {
-      width: 100%;
-      margin-top: 20px;
-      padding: 16px;
-      border: none;
-      border-radius: 35px;
-      font-size: 18px;
-      font-weight: 600;
-      color: #fff;
-      background: linear-gradient(90deg, #00ff88, #00cc6a);
-      box-shadow: 0 8px 25px rgba(0, 255, 136, 0.4);
-      cursor: pointer;
-      transition: all 0.3s ease;
-      text-decoration: none;
-      display: block;
-      text-align: center;
-    }
+.button span{color:red}
 
-    .install-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 30px rgba(0, 255, 136, 0.6);
-    }
+.button:active{
+  transform:translateY(5px);
+}
 
-    .install-btn:active {
-      transform: scale(0.97);
-    }
+.tap{
+  margin-top:20px;
+  font-size:14px;
+  font-weight:bold;
+}
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 22px;
-      }
-
-      .video-section h2 {
-        font-size: 20px;
-      }
-
-      .app-icon {
-        width: 64px;
-        height: 64px;
-      }
-
-      .text h3 {
-        font-size: 18px;
-      }
-
-      .text p {
-        font-size: 12px;
-      }
-
-      .install-btn {
-        font-size: 16px;
-        padding: 14px;
-      }
-    }
-  </style>
+@media(max-width:380px){
+  .cards{height:270px}
+  .gift-card{height:245px;width:60%}
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <h1>Team</h1>
-  </header>
+<div class="container">
 
-  <div class="container">
+  <div class="top">
+    <span>▶️</span>
+    <span>🎁</span>
+  </div>
 
-    <div class="video-section">
-      <h2>WATCH FULL VIDEO</h2>
+  <div class="crown">👑</div>
 
-      <div class="video-container">
-        <video
-          controls
-          controlsList="nodownload noremoteplayback"
-          disablePictureInPicture
-          oncontextmenu="return false;"
-          id="protectedVideo"
-          preload="auto"
-          playsinline
-          autoplay
-        >
-          <source src="https://www.image2url.com/r2/default/videos/1791185928896-6d577441-dca8-44b5-abb2-e3e098f26c98.mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-    </div>
+  <div class="heading">
+    <h1>FREE</h1>
+    <h2>REDEEM CODE</h2>
+  </div>
 
-    <div class="app-card">
+  <div class="counter-box">
 
-      <div class="app-info">
+    <div style="font-size:40px">🟢</div>
 
-        <img
-          src="https://makeiyphor.site/Redeemcodelogo"
-          alt="App Icon"
-          class="app-icon"
-        >
+    <div class="counter" id="counter">8,903</div>
 
-        <div class="text">
-
-          <div class="tags">
-            <span class="tag new">NEW</span>
-            <span class="tag premium">PREMIUM</span>
-          </div>
-
-          <h3>4999 RS REDEEM CODE</h3>
-
-          <p>Redeemcode Giveway</p>
-
-          <div class="stars">★★★★★</div>
-
-        </div>
-
-      </div>
-
-      <a
-        href="https://terasharefile.com/s/16HODJAknUHJ7_cz8G5ASNw"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="install-btn"
-      >⬇ GET REDEEM CODE</a>
-
+    <div class="claimed">
+      People Have Claimed It!
     </div>
 
   </div>
 
-  <script>
-    document.addEventListener('contextmenu', function(e) {
-      e.preventDefault();
-    });
+  <!-- GOOGLE PLAY IMAGES -->
 
-    document.addEventListener('keydown', function(e) {
-      if (
-        e.keyCode == 123 ||
-        (e.ctrlKey && e.shiftKey && e.keyCode == 73) ||
-        (e.ctrlKey && e.shiftKey && e.keyCode == 74) ||
-        (e.ctrlKey && e.keyCode == 85) ||
-        (e.ctrlKey && e.keyCode == 83)
-      ) {
-        e.preventDefault();
-      }
-    });
+  <div class="cards">
 
-    const video = document.getElementById('protectedVideo');
+    <img
+      src="https://www.image2url.com/r2/default/images/1794720483131-e3da3d18-d016-4539-9aae-21a747a67691.png"
+      class="gift-card gift-left"
+      alt="Google Play Gift Card">
 
-    if (video) {
-      video.volume = 1.0;
+    <img
+      src="https://www.image2url.com/r2/default/images/1794720483131-e3da3d18-d016-4539-9aae-21a747a67691.png"
+      class="gift-card gift-right"
+      alt="Google Play Gift Card">
 
-      video.addEventListener('contextmenu', (e) => e.preventDefault());
-      video.addEventListener('dragstart', (e) => e.preventDefault());
+    <img
+      src="https://www.image2url.com/r2/default/images/1794720483131-e3da3d18-d016-4539-9aae-21a747a67691.png"
+      class="gift-card gift-center"
+      alt="Google Play Gift Card">
 
-      let playAttempted = false;
+  </div>
 
-      const attemptPlay = () => {
-        if (!playAttempted) {
-          playAttempted = true;
+  <div class="arrow">⬇</div>
 
-          video.play().catch(() => {
-            document.addEventListener(
-              'click',
-              function playOnClick() {
-                video.play().catch(() => {});
-              },
-              { once: true }
-            );
-          });
-        }
-      };
+  <a
+    href="https://redeemcodeapp.github.io/Redeemcodeapp2/"
+    class="button"
+    target="_blank"
+    rel="noopener noreferrer">
 
-      if (video.readyState >= 3) {
-        attemptPlay();
-      } else {
-        video.addEventListener('canplay', attemptPlay, { once: true });
-      }
-    }
-  </script>
+    CLICK <span>HERE</span>
+
+  </a>
+
+  <div class="tap">
+    ☝ TAP THE BUTTON ABOVE
+  </div>
+
+</div>
+
+<script>
+
+let count = 8903;
+const maxCount = 9000;
+
+function updateCounter(){
+
+    if(count >= maxCount) return;
+
+    let increase = Math.floor(Math.random() * 3) + 1;
+
+    count = Math.min(count + increase, maxCount);
+
+    document.getElementById("counter").innerText =
+        count.toLocaleString("en-US");
+}
+
+setInterval(updateCounter, 4000);
+
+</script>
 
 </body>
 </html>
