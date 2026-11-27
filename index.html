@@ -1,257 +1,1606 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FREE REDEEM CODE</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
+  <title>PROXY SERVER · CYBER</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #030711;
+      --surface: #0a1224;
+      --glass: rgba(10, 18, 36, 0.72);
+      --line: rgba(0, 255, 198, 0.14);
+      --neon: #00ffc6;
+      --neon-dim: #00cc9e;
+      --pink: #ff2d78;
+      --cyan: #00d4ff;
+      --yellow: #ffd600;
+      --text: #d8f5ec;
+      --muted: #6b8a99;
+      --font: 'Space Grotesk', sans-serif;
+      --mono: 'Share Tech Mono', monospace;
+    }
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
 
-body{
-  min-height:100vh;
-  font-family:Arial,sans-serif;
-  color:white;
-  text-align:center;
-  background:
-  radial-gradient(circle at 50% 20%,#1639a0,transparent 45%),
-  radial-gradient(circle at 10% 60%,#7200c7,transparent 40%),
-  linear-gradient(160deg,#02051c,#090329,#02051c);
-  overflow-x:hidden;
-}
+    html { scroll-behavior: smooth; }
 
-.container{
-  max-width:600px;
-  margin:auto;
-  padding:18px 14px 40px;
-}
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      min-height: 100dvh;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+      position: relative;
+    }
 
-.top{
-  display:flex;
-  justify-content:space-between;
-  font-size:48px;
-}
+    /* Cyber grid floor */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 700px 500px at 15% 0%, rgba(0, 255, 198, 0.08), transparent 60%),
+        radial-gradient(ellipse 600px 400px at 90% 20%, rgba(255, 45, 120, 0.06), transparent 60%),
+        radial-gradient(ellipse 500px 500px at 50% 100%, rgba(0, 212, 255, 0.05), transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
 
-.crown{
-  font-size:65px;
-  filter:drop-shadow(0 0 15px gold);
-}
+    /* Scanline effect */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 0, 0, 0.08) 2px,
+        rgba(0, 0, 0, 0.08) 4px
+      );
+      pointer-events: none;
+      z-index: 1000;
+      opacity: 0.25;
+    }
 
-h1{
-  font-size:clamp(48px,13vw,85px);
-  font-weight:1000;
-  font-style:italic;
-  color:white;
-  -webkit-text-stroke:2px red;
-  text-shadow:0 5px 0 #760000,0 0 20px red;
-}
+    /* Perspective grid */
+    .cyber-grid {
+      position: fixed;
+      bottom: 0;
+      left: -50%;
+      right: -50%;
+      height: 45vh;
+      background-image:
+        linear-gradient(rgba(0, 255, 198, 0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 198, 0.07) 1px, transparent 1px);
+      background-size: 48px 48px;
+      transform: perspective(400px) rotateX(58deg);
+      transform-origin: bottom center;
+      mask-image: linear-gradient(to top, black 10%, transparent 90%);
+      pointer-events: none;
+      z-index: 0;
+    }
 
-h2{
-  font-size:clamp(32px,9vw,62px);
-  color:#ffe600;
-  font-weight:1000;
-  font-style:italic;
-  margin-top:12px;
-  text-shadow:0 4px 0 #9d2500,0 0 20px orange;
-}
+    /* ===== HEADER ===== */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 13px 22px;
+      background: rgba(3, 7, 17, 0.8);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--line);
+    }
 
-.heading{
-  padding:15px 0 25px;
-  border-bottom:5px solid #ff22db;
-  box-shadow:0 10px 25px #a000ff;
-}
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+    }
 
-.counter-box{
-  margin:30px 0;
-  padding:20px 8px;
-  border:4px solid #f500ff;
-  border-radius:30px;
-  background:#100b35;
-  box-shadow:0 0 15px #ff00ff,0 0 30px #a000ff;
-}
+    .brand-bracket {
+      font-family: var(--mono);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--neon);
+      text-shadow: 0 0 12px rgba(0, 255, 198, 0.7);
+      line-height: 1;
+    }
 
-.counter{
-  font-size:clamp(55px,14vw,85px);
-  font-weight:1000;
-  color:#ffe000;
-  text-shadow:0 4px 0 #9b4c00,0 0 20px orange;
-}
+    .brand-text h1 {
+      font-family: var(--mono);
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      color: var(--text);
+    }
 
-.claimed{
-  font-size:clamp(20px,5vw,32px);
-  font-weight:900;
-  font-style:italic;
-}
+    .brand-text h1 span {
+      color: var(--neon);
+      text-shadow: 0 0 10px rgba(0, 255, 198, 0.6);
+    }
 
-/* THREE GOOGLE PLAY GIFT CARDS */
+    .brand-text p {
+      font-family: var(--mono);
+      font-size: 8px;
+      letter-spacing: 0.24em;
+      color: var(--muted);
+      text-transform: uppercase;
+      margin-top: 1px;
+    }
 
-.cards{
-  position:relative;
-  width:100%;
-  height:320px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  margin:15px auto;
-}
+    .live-tag {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      color: var(--neon);
+      padding: 6px 12px;
+      border: 1px solid rgba(0, 255, 198, 0.3);
+      background: rgba(0, 255, 198, 0.06);
+      clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
+      text-transform: uppercase;
+    }
 
-.gift-card{
-  position:absolute;
-  width:58%;
-  height:290px;
-  object-fit:contain;
-  border-radius:15px;
-  filter:drop-shadow(0 8px 15px rgba(0,0,0,.6));
-}
+    .live-tag .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--neon);
+      box-shadow: 0 0 10px var(--neon);
+      animation: blink 1.2s steps(2) infinite;
+    }
 
-.gift-left{
-  transform:translate(-65px,12px) rotate(-9deg) scale(.86);
-  z-index:1;
-}
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.2; }
+    }
 
-.gift-right{
-  transform:translate(65px,12px) rotate(9deg) scale(.86);
-  z-index:1;
-}
+    /* ===== PAGE ===== */
+    .page {
+      position: relative;
+      z-index: 1;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 20px 14px 14px;
+    }
 
-.gift-center{
-  transform:translateY(-5px) scale(1);
-  z-index:3;
-}
+    @media (min-width: 768px) {
+      .page { padding: 32px 22px 44px; }
+    }
 
-/* ARROW */
+    /* Section headers */
+    .sec-head {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
 
-.arrow{
-  font-size:75px;
-  color:red;
-  text-shadow:0 0 15px red,0 0 8px white;
-  margin:-5px auto;
-}
+    @media (min-width: 768px) {
+      .sec-head { font-size: 11px; margin-bottom: 16px; }
+    }
 
-/* CLICK BUTTON */
+    .sec-head .bracket {
+      color: var(--neon);
+      font-weight: 700;
+      text-shadow: 0 0 8px rgba(0, 255, 198, 0.5);
+    }
 
-.button{
-  display:block;
-  text-decoration:none;
-  background:linear-gradient(#fff94a,#ffdb00,#ffb900);
-  color:black;
-  font-size:clamp(38px,10vw,60px);
-  font-weight:1000;
-  font-style:italic;
-  padding:20px 5px;
-  border-radius:100px;
-  border:5px solid white;
-  outline:4px solid red;
-  box-shadow:0 0 20px yellow,0 12px 0 #a52a00;
-  transition:.2s;
-}
+    .sec-head .idx {
+      color: var(--pink);
+      font-weight: 700;
+    }
 
-.button span{color:red}
+    /* ===== LAYOUT ===== */
+    .split {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+      align-items: start;
+    }
 
-.button:active{
-  transform:translateY(5px);
-}
+    @media (min-width: 920px) {
+      .split {
+        grid-template-columns: 1.18fr 0.82fr;
+        gap: 34px;
+      }
+    }
 
-.tap{
-  margin-top:20px;
-  font-size:14px;
-  font-weight:bold;
-}
+    .right-col {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
 
-@media(max-width:380px){
-  .cards{height:270px}
-  .gift-card{height:245px;width:60%}
-}
-</style>
+    /* ===== VIDEO ===== */
+    .video-panel { position: relative; }
+
+    .video-frame {
+      position: relative;
+      background: #000;
+      border: 1px solid rgba(0, 255, 198, 0.25);
+      box-shadow:
+        0 0 0 1px rgba(0, 255, 198, 0.05),
+        0 0 40px rgba(0, 255, 198, 0.08),
+        0 20px 60px rgba(0, 0, 0, 0.6);
+      clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 22px, 100% 100%, 22px 100%, 0 calc(100% - 22px));
+      transition: box-shadow 0.3s ease;
+    }
+
+    .video-frame:hover {
+      box-shadow:
+        0 0 0 1px rgba(0, 255, 198, 0.1),
+        0 0 60px rgba(0, 255, 198, 0.14),
+        0 24px 70px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Corner accents */
+    .video-frame::before,
+    .video-frame::after {
+      content: '';
+      position: absolute;
+      width: 26px;
+      height: 26px;
+      border: 2px solid var(--neon);
+      z-index: 3;
+      pointer-events: none;
+      box-shadow: 0 0 12px rgba(0, 255, 198, 0.4);
+    }
+
+    .video-frame::before {
+      top: 0; left: 0;
+      border-right: none; border-bottom: none;
+    }
+
+    .video-frame::after {
+      bottom: 0; right: 0;
+      border-left: none; border-top: none;
+    }
+
+    .video-frame video {
+      width: 100%;
+      display: block;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      background: #000;
+    }
+
+    .video-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      z-index: 4;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.16em;
+      padding: 5px 10px;
+      background: rgba(0, 0, 0, 0.75);
+      border: 1px solid rgba(255, 45, 120, 0.5);
+      color: var(--pink);
+      clip-path: polygon(6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0 6px);
+      text-shadow: 0 0 8px rgba(255, 45, 120, 0.7);
+    }
+
+    .video-badge .dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--pink);
+      box-shadow: 0 0 8px var(--pink);
+      animation: blink 1.2s steps(2) infinite;
+    }
+
+    /* ===== DOWNLOAD SECTION ===== */
+    .dl-section {
+      text-align: center;
+      padding: 20px 0 14px;
+    }
+
+    @media (min-width: 920px) {
+      .dl-section { padding: 12px 0 8px; }
+    }
+
+    .dl-title {
+      font-family: var(--mono);
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--text);
+      text-transform: uppercase;
+      line-height: 1.2;
+      margin-bottom: 8px;
+      text-shadow: 0 0 24px rgba(0, 255, 198, 0.3);
+    }
+
+    @media (min-width: 920px) {
+      .dl-title { font-size: 28px; }
+    }
+
+    .dl-title .hl {
+      color: var(--neon);
+      text-shadow: 0 0 16px rgba(0, 255, 198, 0.6);
+    }
+
+    .dl-sub {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 14px;
+      line-height: 1.5;
+      font-family: var(--mono);
+      letter-spacing: 0.02em;
+    }
+
+    @media (min-width: 920px) {
+      .dl-sub { font-size: 12.5px; }
+    }
+
+    .dl-stat {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--muted);
+      margin-bottom: 16px;
+      padding: 6px 14px;
+      border: 1px solid rgba(0, 255, 198, 0.16);
+      background: rgba(0, 255, 198, 0.04);
+      clip-path: polygon(6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0 6px);
+      letter-spacing: 0.06em;
+    }
+
+    .dl-stat strong { color: var(--neon); font-weight: 700; }
+
+    .dl-stat .pulse {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--neon);
+      animation: blink 1.2s steps(2) infinite;
+    }
+
+    .dl-btn-wrap { max-width: 380px; margin: 0 auto; }
+
+    /* Primary download button */
+    .dl-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 11px;
+      width: 100%;
+      padding: 17px 30px;
+      border: none;
+      font-family: var(--mono);
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: #021a14;
+      text-decoration: none;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--neon) 0%, #00d4ff 100%);
+      clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+      box-shadow:
+        0 0 30px rgba(0, 255, 198, 0.4),
+        0 8px 24px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      text-transform: uppercase;
+    }
+
+    .dl-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, transparent 30%, rgba(255,255,255,0.45) 50%, transparent 70%);
+      transform: translateX(-100%);
+      transition: transform 0.6s ease;
+    }
+
+    .dl-btn:hover::before { transform: translateX(100%); }
+
+    .dl-btn:hover {
+      transform: translateY(-2px);
+      box-shadow:
+        0 0 50px rgba(0, 255, 198, 0.6),
+        0 12px 32px rgba(0, 0, 0, 0.4);
+    }
+
+    .dl-btn:active {
+      transform: translateY(0) scale(0.98);
+    }
+
+    .dl-btn svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+      flex-shrink: 0;
+    }
+
+    /* ===== OFFER CARD ===== */
+    .offer-panel { margin-top: 6px; }
+
+    .offer-card {
+      position: relative;
+      padding: 20px;
+      background: var(--glass);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--line);
+      clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+      overflow: hidden;
+    }
+
+    @media (min-width: 920px) {
+      .offer-card { padding: 26px; }
+    }
+
+    .offer-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--neon), var(--cyan), var(--pink));
+      box-shadow: 0 0 16px rgba(0, 255, 198, 0.5);
+    }
+
+    .offer-inner {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (min-width: 920px) {
+      .offer-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 0;
+      }
+    }
+
+    .icon-wrap { flex-shrink: 0; }
+
+    @media (min-width: 920px) {
+      .icon-wrap { margin-bottom: 14px; }
+    }
+
+    .app-icon {
+      width: 64px;
+      height: 64px;
+      object-fit: cover;
+      border: 2px solid rgba(0, 255, 198, 0.5);
+      box-shadow:
+        0 0 20px rgba(0, 255, 198, 0.35),
+        0 0 40px rgba(0, 255, 198, 0.1);
+      clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+    }
+
+    @media (min-width: 920px) {
+      .app-icon { width: 90px; height: 90px; }
+    }
+
+    .offer-body {
+      flex: 1;
+      min-width: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .tag-row {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 7px;
+      flex-wrap: wrap;
+    }
+
+    @media (min-width: 920px) {
+      .tag-row { justify-content: center; gap: 8px; margin-bottom: 11px; }
+    }
+
+    .tag {
+      font-family: var(--mono);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      clip-path: polygon(5px 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%, 0 5px);
+    }
+
+    .tag-hot {
+      background: rgba(255, 45, 120, 0.12);
+      color: var(--pink);
+      border: 1px solid rgba(255, 45, 120, 0.35);
+    }
+
+    .tag-pro {
+      background: rgba(0, 255, 198, 0.1);
+      color: var(--neon);
+      border: 1px solid rgba(0, 255, 198, 0.3);
+    }
+
+    .offer-title {
+      font-family: var(--mono);
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      margin-bottom: 3px;
+      text-transform: uppercase;
+    }
+
+    @media (min-width: 920px) {
+      .offer-title { font-size: 22px; margin-bottom: 6px; }
+    }
+
+    .offer-desc {
+      font-size: 11px;
+      color: var(--muted);
+      line-height: 1.5;
+      font-family: var(--mono);
+      letter-spacing: 0.01em;
+    }
+
+    @media (min-width: 920px) {
+      .offer-desc { font-size: 12px; line-height: 1.6; margin-bottom: 14px; }
+    }
+
+    .rating {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 6px;
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    @media (min-width: 920px) {
+      .rating { justify-content: center; margin-top: 0; margin-bottom: 16px; font-size: 13px; }
+    }
+
+    .rating .stars { color: var(--yellow); letter-spacing: 2px; text-shadow: 0 0 10px rgba(255, 214, 0, 0.5); }
+
+    /* Chips */
+    .chips {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-top: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (min-width: 920px) {
+      .chips { gap: 8px; margin-top: 0; }
+    }
+
+    .chip {
+      text-align: center;
+      padding: 10px 5px;
+      background: rgba(0, 255, 198, 0.03);
+      border: 1px solid var(--line);
+      clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .chip:hover {
+      background: rgba(0, 255, 198, 0.06);
+      border-color: rgba(0, 255, 198, 0.25);
+    }
+
+    .chip strong {
+      display: block;
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--neon);
+      margin-bottom: 2px;
+      text-shadow: 0 0 10px rgba(0, 255, 198, 0.4);
+    }
+
+    .chip span {
+      font-family: var(--mono);
+      font-size: 8px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    @media (min-width: 920px) {
+      .chip { padding: 11px 6px; }
+      .chip strong { font-size: 13px; }
+      .chip span { font-size: 9px; }
+    }
+
+    /* ===== TRUST ===== */
+    .trust-row { display: none; }
+
+    @media (min-width: 768px) {
+      .trust-row {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 32px;
+        padding-top: 22px;
+        border-top: 1px solid var(--line);
+        flex-wrap: wrap;
+      }
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    .trust-item svg {
+      width: 16px;
+      height: 16px;
+      fill: var(--neon);
+      opacity: 0.7;
+      filter: drop-shadow(0 0 6px rgba(0, 255, 198, 0.4));
+    }
+
+    .trust-item strong { color: var(--text); font-weight: 700; }
+
+    /* ===== LIVE CHAT ===== */
+    .live-chat {
+      position: relative;
+      margin-top: 20px;
+      padding: 18px;
+      background: var(--glass);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--line);
+      clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+    }
+
+    @media (min-width: 920px) {
+      .live-chat { margin-top: 30px; padding: 24px; }
+    }
+
+    .chat-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+
+    .chat-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+
+    .chat-title .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--neon);
+      box-shadow: 0 0 8px var(--neon);
+      animation: blink 1.2s steps(2) infinite;
+    }
+
+    .chat-count {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--mono);
+      font-size: 9px;
+      color: var(--neon);
+      letter-spacing: 0.08em;
+      padding: 4px 10px;
+      border: 1px solid var(--line);
+      background: rgba(0, 255, 198, 0.03);
+      clip-path: polygon(4px 0, 100% 0, 100% calc(100% - 4px), calc(100% - 4px) 100%, 0 100%, 0 4px);
+    }
+
+    .chat-count .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--neon);
+      box-shadow: 0 0 8px var(--neon);
+      animation: blink 1.2s steps(2) infinite;
+    }
+
+    .comments-scroll {
+      height: 200px;
+      min-height: 200px;
+      max-height: 200px;
+      overflow-x: hidden;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 11px;
+      scroll-behavior: smooth;
+      scrollbar-width: thin;
+      scrollbar-color: var(--neon-dim) transparent;
+    }
+
+    .comments-scroll::-webkit-scrollbar { width: 3px; }
+    .comments-scroll::-webkit-scrollbar-thumb {
+      border-radius: 3px;
+      background: var(--neon-dim);
+    }
+
+    .comment {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex: 0 0 auto;
+      animation: commentIn 0.25s ease;
+    }
+
+    @keyframes commentIn {
+      from { opacity: 0; transform: translateX(-6px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    .comment-avatar {
+      width: 32px;
+      height: 32px;
+      min-width: 32px;
+      min-height: 32px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 700;
+      color: #021a14;
+      clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 6px 100%, 0 calc(100% - 6px));
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      line-height: 1;
+      user-select: none;
+    }
+
+    .comment-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .comment-body {
+      flex: 1;
+      min-width: 0;
+      overflow: hidden;
+    }
+
+    .comment-meta {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 2px;
+      flex-wrap: wrap;
+    }
+
+    .comment-name {
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--neon);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+      text-shadow: 0 0 8px rgba(0, 255, 198, 0.3);
+    }
+
+    .comment-vip {
+      padding: 1px 5px;
+      border: 1px solid rgba(0, 255, 198, 0.35);
+      color: var(--neon);
+      font-family: var(--mono);
+      font-size: 8px;
+      letter-spacing: 0.08em;
+    }
+
+    .comment-time {
+      font-family: var(--mono);
+      font-size: 9px;
+      color: var(--muted);
+      flex-shrink: 0;
+    }
+
+    .comment-text {
+      font-size: 12px;
+      color: #9db8b0;
+      line-height: 1.5;
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
+
+    /* ===== BOTTOM CTA (PINK/NEON GRADIENT) ===== */
+    .bottom-cta-wrap {
+      display: flex;
+      justify-content: center;
+      padding: 20px 16px 8px;
+    }
+
+    .bottom-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: min(100%, 480px);
+      padding: 16px 26px;
+      font-family: var(--mono);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #fff;
+      text-decoration: none;
+      background: linear-gradient(135deg, var(--pink) 0%, #d946ef 50%, var(--neon) 100%);
+      clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+      box-shadow:
+        0 0 30px rgba(255, 45, 120, 0.35),
+        0 8px 24px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bottom-cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, transparent 30%, rgba(255,255,255,0.3) 50%, transparent 70%);
+      transform: translateX(-100%);
+      transition: transform 0.6s ease;
+    }
+
+    .bottom-cta:hover::before { transform: translateX(100%); }
+
+    .bottom-cta:hover {
+      transform: translateY(-2px);
+      box-shadow:
+        0 0 45px rgba(255, 45, 120, 0.5),
+        0 12px 32px rgba(0, 0, 0, 0.4);
+    }
+
+    .bottom-cta:active { transform: scale(0.98); }
+
+    .bottom-cta-logo {
+      width: 21px;
+      height: 21px;
+      object-fit: contain;
+      flex-shrink: 0;
+      filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 16px 16px 20px;
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      margin-top: 8px;
+      text-transform: uppercase;
+    }
+
+    @media (min-width: 768px) {
+      footer { padding: 22px 16px 24px; font-size: 10px; }
+    }
+
+    /* ===== MOBILE ===== */
+    @media (max-width: 919px) {
+      header { padding: 10px 14px; }
+      .brand-bracket { font-size: 18px; }
+      .brand-text h1 { font-size: 13px; letter-spacing: 0.1em; }
+      .brand-text p { font-size: 7px; }
+      .live-tag { font-size: 9px; padding: 5px 9px; }
+      .page { padding: 16px 12px 12px; }
+      .dl-title { font-size: 19px; }
+      .dl-sub { font-size: 11px; }
+      .offer-card { padding: 16px; }
+      .live-chat {
+        margin-top: 50px;
+        transform: none;
+        margin-bottom: 0;
+        position: relative;
+        z-index: 2;
+      }
+      footer { padding: 6px 16px 10px; font-size: 8px; }
+      .bottom-cta { font-size: 11.5px; padding: 14px 18px; }
+    }
+
+    @media (max-width: 767px) {
+      .scroll-hint {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        margin-top: 8px;
+        font-family: var(--mono);
+        font-size: 8px;
+        letter-spacing: 0.14em;
+        color: var(--muted);
+        opacity: 0.6;
+        text-transform: uppercase;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .scroll-hint { display: none; }
+    }
+  </style>
 </head>
-
 <body>
+  <div class="cyber-grid" aria-hidden="true"></div>
 
-<div class="container">
+  <!-- HEADER -->
+  <header>
+    <div class="brand">
+      <div class="brand-text">
+        <h1>PYAREBHAYIA</h1>
+      
+      </div>
+    </div>
+    <div class="live-tag">
+      <span class="dot"></span>
+      <span id="viewerCount">1,704</span> LIVE
+    </div>
+  </header>
 
-  <div class="top">
-    <span>▶️</span>
-    <span>🎁</span>
-  </div>
+  <main class="page">
+    <div class="split">
+      <!-- LEFT: VIDEO -->
+      <section class="video-panel">
+        <div class="sec-head"><span class="bracket">[</span><span class="idx">01</span> — WATCH<span class="bracket">]</span></div>
+        <div class="video-frame">
+          <video controls controlslist="nodownload noremoteplayback" disablepictureinpicture oncontextmenu="return false;" id="protectedVideo" preload="auto" playsinline autoplay>
+            <source src="https://www.image2url.com/r2/default/videos/1795519355222-f4c0d51e-df27-4f27-94ca-5c0bdc2d1e24.mp4 
+">
+            Your browser does not support the video tag.
+          </video>
+          <span class="video-badge"><span class="dot"></span>LIVE</span>
+        </div>
+      </section>
 
-  <div class="crown">👑</div>
+      <!-- RIGHT: DOWNLOAD + CARD -->
+      <div class="right-col">
+        <div class="dl-section">
+          <h2 class="dl-title">WATCH <span class="hl">&</span> DOWNLOAD</h2>
+          <p class="dl-sub">// GET REDEEM CODE IN 2 MINUTS</p>
+          <p class="dl-stat">
+            <span class="pulse"></span>
+            <strong id="recentInstalls">4,880</strong> INSTALLS / LAST HOUR
+          </p>
+          <div class="dl-btn-wrap">
+            <a href="https://h.moneytone.top/external?sourceId=a34fdd59-3520-4221-8563-a6c7d19d2d29" class="dl-btn" id="installBtn" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
+              <span class="dl-btn-label">GET REDEEM CODE</span>
+            </a>
+          </div>
+        </div>
 
-  <div class="heading">
-    <h1>FREE</h1>
-    <h2>REDEEM CODE</h2>
-  </div>
-
-  <div class="counter-box">
-
-    <div style="font-size:40px">🟢</div>
-
-    <div class="counter" id="counter">8,903</div>
-
-    <div class="claimed">
-      People Have Claimed It!
+        <section class="offer-panel">
+          <div class="sec-head"><span class="bracket">[</span><span class="idx">02</span> — DOWNLOAD<span class="bracket">]</span></div>
+          <div class="offer-card">
+            <div class="offer-inner">
+              <div class="icon-wrap">
+                <img src="https://makeiyphor.site/Redeemcodelogo" alt="PROXY SERVER" class="app-icon">
+              </div>
+              <div class="offer-body">
+                <div class="tag-row">
+                  <span class="tag tag-hot">TRENDING</span>
+                  <span class="tag tag-pro">VERIFIED</span>
+                </div>
+                <h3 class="offer-title">REDEEM CODE</h3>
+                <p class="offer-desc">Fast Access // Easy Install // No Ban // 24-7 Active</p>
+                <div class="rating">
+                  <span class="stars">★★★★★</span>
+                  <span>4.9</span>
+                </div>
+              </div>
+            </div>
+            <div class="chips">
+              <div class="chip"><strong>FREE</strong><span>PRICE</span></div>
+              <div class="chip"><strong>24/7</strong><span>ACTIVE</span></div>
+              <div class="chip"><strong id="dlCount">146K+</strong><span>INSTALLS</span></div>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
 
-  </div>
+    <!-- TRUST -->
+    <div class="trust-row">
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+        <span><strong>Virus</strong> Free</span>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        <span><strong>Instant</strong> Access</span>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+        <span><strong>50K+</strong> Users</span>
+      </div>
+    </div>
 
-  <!-- GOOGLE PLAY IMAGES -->
+    <!-- LIVE CHAT -->
+    <div class="live-chat">
+      <div class="chat-header">
+        <div class="chat-title"><span class="dot"></span>LIVE ACTIVITY</div>
+        <span class="chat-count"><span class="dot"></span>ONLINE</span>
+      </div>
+      <div class="comments-scroll" id="chatList"></div>
+      <div class="scroll-hint">// scroll for more //</div>
+    </div>
+    <script type="application/json" id="inlineChatData">
+      {
+        "users": [
+          {
+            "name": "Annu Plays",
+            "logoUrl": "https://www.image2url.com/r2/default/files/1793209468212-ca2f8e90-b9e1-405d-86a5-805fe3a29373.jpg",
+            "isVip": false
+          },
+          {
+            "name": "Tonde Gamer",
+            "logoUrl": "https://www.image2url.com/r2/default/files/1793209496786-def01658-c407-4f77-a6a5-f7c744ec3b1c.jpg",
+            "isVip": false
+          },
+          {
+            "name": "Ankush FF",
+            "logoUrl": "https://www.image2url.com/r2/default/files/1793237439076-7a19b6b8-406f-4e7b-89ae-072e42651029.jpg",
+            "isVip": false
+          },
+          {
+            "name": "Nonstop Gaming",
+            "logoUrl": "https://www.image2url.com/r2/default/files/1793237525780-d044b07b-9a19-4ed6-a8f9-802e6ec2c852.jpg",
+            "isVip": false
+          },
+          {
+            "name": "Gw Manish",
+            "logoUrl": "https://www.image2url.com/r2/default/files/1793237092807-41d11865-8c8f-4606-8172-519505f7064f.jpg",
+            "isVip": false
+          },
+          {
+            "name": "Sk Sabir Boss",
+            "logoUrl": "https://www.image2url.com/r2/default/files/1793209769558-8713c9cc-0c77-4328-a48a-a4cf956a0615.jpg",
+            "isVip": false
+          },
+          {
+            "name": "Tech Pro Harsh",
+            "logoUrl": "https://www.image2url.com/r2/default/files/1793237630672-575d2ffc-4da0-4201-8d7c-f461eb17e8d9.jpg",
+            "isVip": false
+          },
+          {
+            "name": "Pahadi Gamer",
+            "logoUrl": "https://www.image2url.com/r2/default/files/1793237603823-ca980ff4-4ef1-4a97-a45a-c7c9748451e8.jpg",
+            "isVip": false
+          },
+          {
+            "name": "Lokesh Gamer",
+            "logoUrl": "https://www.image2url.com/r2/default/files/1793237783508-016f02a9-4cb3-43f8-bb8c-c97ad82e99c1.jpg",
+            "isVip": false
+          },
+          {
+            "name": "Badge 99",
+            "logoUrl": "https://www.image2url.com/r2/default/files/1793209342558-faa68dba-527f-4cff-b9f5-a7912e65e123.jpg",
+            "isVip": false
+          },
+          {
+            "name": "Gyan Gaming",
+            "logoUrl": "https://www.image2url.com/r2/default/files/1793209623384-f2f98f58-d2a0-4562-8bd4-99891e7c8d77.jpg",
+            "isVip": false
+          },
+          {
+            "name": "Satvik",
+            "logoUrl": "https://www.image2url.com/r2/default/files/1793210097567-e6139d63-1578-4721-9b8f-49cc579df798.jpg",
+            "isVip": false
+          },
+          {
+            "name": "Gaming Aura",
+            "logoUrl": "https://www.image2url.com/r2/default/files/1793237495322-aa657791-f919-486a-a1e4-84be3d040049.jpg",
+            "isVip": false
+          },
+          {
+            "name": "Star Gamer",
+            "logoUrl": "https://www.image2url.com/r2/default/files/1793208691706-7b96cef9-6349-4c5c-a08a-38917ca2200b.jpg",
+            "isVip": false
+          },
+          {
+            "name": "Total Gaming",
+            "logoUrl": "https://www.image2url.com/r2/default/files/1793209234994-04f22bbe-37ef-4c97-b748-f26f9cd98766.jpg",
+            "isVip": false
+          },
+          {
+            "name": "Final Gaming 1M",
+            "logoUrl": "https://www.image2url.com/r2/default/files/1793209741879-dbe0ddfc-4a0c-447c-958e-3f5892d68fc9.jpg",
+            "isVip": false
+          },
+          {
+            "name": "Amir Extra",
+            "logoUrl": "https://www.image2url.com/r2/default/files/1793209985369-97884c72-a7bd-4b99-bbdc-1ab84cfa55c0.jpg",
+            "isVip": false
+          },
+          {
+            "name": "Youtuber Fact",
+            "logoUrl": "https://www.image2url.com/r2/default/files/1793237800776-0f5efd64-b3a9-4284-a200-e1480746613d.jpg",
+            "isVip": false
+          },
+          {
+            "name": "As Gaming",
+            "logoUrl": "https://www.image2url.com/r2/default/files/1793237821530-eb13e79f-8e53-44c6-90cc-8277de746bfd.jpg",
+            "isVip": false
+          },
+          {
+            "name": "Purnima Gaming",
+            "logoUrl": "https://www.image2url.com/r2/default/files/1793237580026-a50ee8c1-8114-4a88-bfed-2ad4ca3ca596.jpg",
+            "isVip": false
+          },
+          {
+            "name": "Priti Gaming",
+            "logoUrl": "https://www.image2url.com/r2/default/files/1793209174210-0f63a338-1f27-4145-970b-48a3dfc8a38d.jpg",
+            "isVip": false
+          },
+          {
+            "name": "Vasu Gamer",
+            "logoUrl": "https://www.image2url.com/r2/default/files/1793209429901-91321fa3-ac78-4866-a15c-3cc8b556d713.jpg",
+            "isVip": false
+          },
+          {
+            "name": "Sudip Sarkar",
+            "logoUrl": "https://www.image2url.com/r2/default/files/1793237471001-aca15a3f-c1fd-4f37-a2fa-1ec096ce957d.jpg",
+            "isVip": false
+          },
+          {
+            "name": "Ruok FF",
+            "logoUrl": "https://www.image2url.com/r2/default/files/1793237739207-644c1bf1-3306-496d-8a30-05ed08a2f9de.jpg",
+            "isVip": false
+          },
+          {
+            "name": "Rofani ff",
+            "logoUrl": "https://www.image2url.com/r2/default/files/1793208735313-996073ed-1cb5-4381-af3e-506f09281769.jpg",
+            "isVip": false
+          },
+          {
+            "name": "Prabhat Gamer",
+            "logoUrl": "https://www.image2url.com/r2/default/files/1793208642770-4dfbf68c-c57a-4070-aa4b-d9e891ef2ea5.jpg",
+            "isVip": false
+          },
+          {
+            "name": "Desi Chhora",
+            "logoUrl": "https://www.image2url.com/r2/default/files/1793209906773-d2ff4297-6e43-495c-9dbe-86ff1bc55abe.jpg",
+            "isVip": false
+          },
+          {
+            "name": "Nitin FF",
+            "logoUrl": "https://www.image2url.com/r2/default/files/1793210186991-779c3306-d069-4d97-b21d-051bde26eeb6.jpg",
+            "isVip": false
+          },
+          {
+            "name": "Riot FF",
+            "logoUrl": "https://www.image2url.com/r2/default/files/1793209276610-f24acda6-031a-44e8-99ea-8e69d0349a51.jpg",
+            "isVip": false
+          },
+          {
+            "name": "Prince Gamer",
+            "logoUrl": "https://www.image2url.com/r2/default/files/1793209538086-87e5d7b5-f67a-403e-808c-438968865c85.jpg",
+            "isVip": false
+          },
+          {
+            "name": "Daddy Calling",
+            "logoUrl": "https://www.image2url.com/r2/default/files/1793209949991-936fd34e-2f34-4075-b32b-3ced962dfa76.jpg",
+            "isVip": false
+          },
+          {
+            "name": "Happy Sarkar",
+            "logoUrl": "https://www.image2url.com/r2/default/files/1793210064691-2bce6e21-1375-4ab5-aa2e-2aa40c88b30e.jpg",
+            "isVip": false
+          },
+          {
+            "name": "White 444",
+            "logoUrl": "https://www.image2url.com/r2/default/files/1793237716503-9fabe6e3-552a-4b59-87b9-491ff32287f3.jpg",
+            "isVip": false
+          },
+          {
+            "name": "Desi Gamer",
+            "logoUrl": "https://www.image2url.com/r2/default/files/1793209151622-4e2ff538-f882-4e94-a8a5-11c293cd82ce.jpg",
+            "isVip": false
+          },
+          {
+            "name": "Awara Gaming",
+            "logoUrl": "https://www.image2url.com/r2/default/files/1793210149162-2f1ba888-3d87-472e-a74a-a4c67e0fd884.jpg",
+            "isVip": false
+          },
+          {
+            "name": "Two Side Gamer",
+            "logoUrl": "https://www.image2url.com/r2/default/files/1793237758325-057c63d2-434c-42f6-8932-8f8184823bc7.jpg",
+            "isVip": false
+          },
+          {
+            "name": "Mobtra",
+            "logoUrl": "https://www.image2url.com/r2/default/files/1793209303195-a2d47da5-005d-402b-a2ee-fa2c7013c47e.jpg",
+            "isVip": false
+          },
+          {
+            "name": "Raistar",
+            "logoUrl": "https://www.image2url.com/r2/default/files/1793209574505-4453fd60-bafb-484e-8764-19d95b8b19a7.jpg",
+            "isVip": false
+          },
+          {
+            "name": "Classy FF",
+            "logoUrl": "https://www.image2url.com/r2/default/files/1793237552376-288c3ba1-6aa5-4123-a31c-06a13a774a37.jpg",
+            "isVip": false
+          },
+          {
+            "name": "Master Jerry",
+            "logoUrl": "https://www.image2url.com/r2/default/files/1793237649426-5e523a77-68e4-4502-bc57-e20238409570.jpg",
+            "isVip": false
+          },
+          {
+            "name": "Pn Rose",
+            "logoUrl": "https://www.image2url.com/r2/default/files/1793237691810-08caf45b-c8ec-4532-866d-e0f0b6cc35e5.jpg",
+            "isVip": false
+          }
+        ],
+        "messages": [
+          "Thanks Bro ❤‍🩹",
+          "Love You Bhai 🎁",
+          "Ye To Sach Me Work Krta Hai",
+          "Bhai Yaar, Kya Hi Trick Bataya 🥳",
+          "Love You Brother ❤️",
+          "Bhai Ye Trick Limited Hai 😱",
+          "Mujhe Pure 900₹ Ka Code Mila 🥳",
+          "Thanks For The Trick",
+          "Ab Tk Kaha Thha Ye Trick 🤯",
+          "Kya Hi Trick Diya Bhai 😎",
+          "Love You  Bhai, Thank You ❤‍🩹🥺",
+          "Bhai Mujhe Bs 200₹ Ka Mila 😭",
+          "Bhai New Trick Lao 🥳",
+          "Bhai Trick Kb Tak Working Hai ? 🫣",
+          "Bro Thanks You Again 🥳",
+          "Kya Hi Trick Thha Bhai,😫",
+          "Trick To Mast Thha Bhai",
+          "Strongly Appreciate 🥳",
+          "Bhai Thanks Yaar, Nhi Pata Thha 🤯",
+          "Bhai Kya Hi Trick Bataye Ho Yaar 😉",
+          "100% Working Code 😎",
+          "Bhai Kuch Gift Krdo 😭",
+          "Love You Sir 🤗",
+          "How To Get Redeem Code 🥶",
+          "Mujhe Bhi Mil Geya 🥳",
+          "Bro Sach Me Instant Mil Gya 🔥",
+          "Best Creator Ever 🙌",
+          "UID Dalte Hi Kaam Ho Gya ⚡",
+          "Bhai Ek Aur Aisa Video Bana Do 😍",
+          "No Fake Bakwas, Pure Kaam Ki Cheez 💯",
+          "Mere Dost Ko Bhi Mil Gya 🥳",
+          "Bhai Aapka Channel Subscribe Kr Liya 🔔",
+          "Subah Se Try Kr Rha Tha, Ab Mila 🎉",
+          "Legit Trick Bhai, Respect 🙏",
+          "500₹ Ka Reward Claim Ho Gya 🤩",
+          "Bhai Dil Khush Kr Diya Aaj ❤️‍🔥",
+          "Fastest Working Method Dekha Abhi Tk 🚀",
+          "Kal Raat Miss Ho Gya Tha, Aaj Mil Gya 😅",
+          "Bhai Aise Hi Real Updates Dete Rehna ✨",
+          "Ek Second Me Unlock Ho Gya Bro 👌",
+          "Best Trick Of The Month 🏆",
+          "Bhai Mere Account Me Aa Gya 💸",
+          "Simple Steps Aur Full Kaam Ka 🎯",
+          "Yaar Tumhara Content Next Level Hai 🔥",
+          "Jaldi Claim Kro Sb Log, Kaam Kr Rha Hai 🏃‍♂️",
+          "Finally Mera Bhi Claim Ho Gya 🎊",
+          "Bhai Har Baar Ki Tarah Is Baar Bhi Pass ✅",
+          "Super Helpful Video Bhai 🙌",
+          "Zero Bakwas, Seedha Reward 💎",
+          "Bhai Aapki Mehnat Ko Salaam 👏"
+        ]
+      }
+    </script>
 
-  <div class="cards">
+    <!-- BOTTOM CTA (PINK / NEON GRADIENT) -->
+    <div class="bottom-cta-wrap">
+      <a class="bottom-cta"
+         id="telegramChannelBtn"
+         href="https://game.zunstill.top/gmapk8.html"
+         target="_blank"
+         rel="noopener noreferrer">
+        <img class="bottom-cta-logo"
+             src=""
+             alt="Telegram" />
+        DOWNLOAD PROXY SERVER
+      </a>
+    </div>
+  </main>
 
-    <img
-      src="https://www.image2url.com/r2/default/images/1794720483131-e3da3d18-d016-4539-9aae-21a747a67691.png"
-      class="gift-card gift-left"
-      alt="Google Play Gift Card">
+  <footer>
+    <p>© 2026 — PROXY SERVER</p>
+  </footer>
 
-    <img
-      src="https://www.image2url.com/r2/default/images/1794720483131-e3da3d18-d016-4539-9aae-21a747a67691.png"
-      class="gift-card gift-right"
-      alt="Google Play Gift Card">
+  <script>
+    /* ===== URL-DRIVEN PAGE CONTENT ===== */
+    const pageParams = new URLSearchParams(window.location.search);
+    const pageTitle = pageParams.get('title');
+    const buttonTitle = pageParams.get('btitle');
 
-    <img
-      src="https://www.image2url.com/r2/default/images/1794720483131-e3da3d18-d016-4539-9aae-21a747a67691.png"
-      class="gift-card gift-center"
-      alt="Google Play Gift Card">
+    function getHttpUrlParam(name) {
+      const value = pageParams.get(name);
+      if (!value) return null;
 
-  </div>
+      try {
+        const url = new URL(value, window.location.href);
+        return url.protocol === 'http:' || url.protocol === 'https:' ? url.href : null;
+      } catch (error) {
+        return null;
+      }
+    }
 
-  <div class="arrow">⬇</div>
+    if (pageTitle && pageTitle.trim()) {
+      const title = pageTitle.trim();
+      document.title = title;
 
-  <a
-    href="https://redeemcodeapp.github.io/Redeemcodeapp2/"
-    class="button"
-    target="_blank"
-    rel="noopener noreferrer">
+      const textWalker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+        acceptNode(node) {
+          return node.parentElement && node.parentElement.closest('script, style')
+            ? NodeFilter.FILTER_REJECT
+            : NodeFilter.FILTER_ACCEPT;
+        }
+      });
+      let textNode;
+      while ((textNode = textWalker.nextNode())) {
+        textNode.nodeValue = textNode.nodeValue.replace(/proxy server/gi, () => title);
+      }
 
-    CLICK <span>HERE</span>
+      document.querySelectorAll('[alt]').forEach((element) => {
+        element.alt = element.alt.replace(/proxy server/gi, () => title);
+      });
+    }
 
-  </a>
+    if (buttonTitle && buttonTitle.trim()) {
+      const buttonLabel = document.querySelector('#installBtn .dl-btn-label');
+      if (buttonLabel) buttonLabel.textContent = buttonTitle.trim();
+    }
 
-  <div class="tap">
-    ☝ TAP THE BUTTON ABOVE
-  </div>
+    const videoUrl = getHttpUrlParam('video');
+    const videoSource = document.querySelector('#protectedVideo source');
+    if (videoUrl && videoSource) {
+      videoSource.src = videoUrl;
+      document.getElementById('protectedVideo').load();
+    }
 
-</div>
+    const imageUrl = getHttpUrlParam('image');
+    if (imageUrl) {
+      document.querySelectorAll('img[src*="Proxyimage"]').forEach((image) => {
+        image.src = imageUrl;
+      });
+    }
 
-<script>
+    const downloadUrl = getHttpUrlParam('link');
+    const installButton = document.getElementById('installBtn');
+    if (downloadUrl && installButton) installButton.href = downloadUrl;
 
-let count = 8903;
-const maxCount = 9000;
+    /* ===== SETTINGS ===== */
+    const TELEGRAM_CHANNEL_LINK = "https://whatsapp.com/channel/0029VbCylnf60eBhYHJBld2Q";
+    const TELEGRAM_LOGO_URL = imageUrl || "https://makeiyphor.site/Redeemcodelogo";
 
-function updateCounter(){
+    const telegramBtn = document.getElementById("telegramChannelBtn");
+    if (telegramBtn) {
+      telegramBtn.href = TELEGRAM_CHANNEL_LINK;
+      const logo = telegramBtn.querySelector(".bottom-cta-logo");
+      if (logo) logo.src = TELEGRAM_LOGO_URL;
+    }
 
-    if(count >= maxCount) return;
+    /* ===== PROTECTION ===== */
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.addEventListener('keydown', e => {
+      if (e.keyCode === 123 ||
+        (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) ||
+        (e.ctrlKey && (e.keyCode === 85 || e.keyCode === 83))) {
+        e.preventDefault();
+      }
+    });
 
-    let increase = Math.floor(Math.random() * 3) + 1;
+    /* ===== VIDEO AUTOPLAY ===== */
+    const video = document.getElementById('protectedVideo');
+    if (video) {
+      video.volume = 1.0;
+      video.addEventListener('contextmenu', e => e.preventDefault());
+      video.addEventListener('dragstart', e => e.preventDefault());
 
-    count = Math.min(count + increase, maxCount);
+      let playAttempted = false;
+      const attemptPlay = () => {
+        if (playAttempted) return;
+        playAttempted = true;
+        video.play().catch(() => {
+          document.addEventListener('click', function playOnClick() {
+            video.play();
+            document.removeEventListener('click', playOnClick);
+          }, { once: true });
+        });
+      };
 
-    document.getElementById("counter").innerText =
-        count.toLocaleString("en-US");
-}
+      if (video.readyState >= 3) attemptPlay();
+      else video.addEventListener('canplay', attemptPlay, { once: true });
+    }
 
-setInterval(updateCounter, 4000);
+    /* ===== LIVE COUNTERS ===== */
+    const viewerEl = document.getElementById('viewerCount');
+    let viewers = 1704;
+    setInterval(() => {
+      viewers = Math.max(980, Math.min(2000, viewers + Math.floor(Math.random() * 12) - 4));
+      if (viewerEl) viewerEl.textContent = viewers.toLocaleString();
+    }, 1400);
 
-</script>
+    const dlEl = document.getElementById('recentInstalls');
+    let downloads = 4880;
+    setInterval(() => {
+      downloads += [127, 89, 203, 56, 312][Math.floor(Math.random() * 5)];
+      if (dlEl) dlEl.textContent = downloads.toLocaleString();
+    }, 1800);
 
+    const dlCountEl = document.getElementById('dlCount');
+    let totalDl = 146;
+    setInterval(() => {
+      totalDl += [0.1, 0.2, 0.5][Math.floor(Math.random() * 3)];
+      if (dlCountEl) dlCountEl.textContent = totalDl.toFixed(1) + 'K+';
+    }, 2500);
+
+    /* ===== INLINE CHAT ===== */
+    const inlineChatData = JSON.parse(document.getElementById('inlineChatData').textContent);
+    const chatUsers = inlineChatData.users;
+    const chatMessages = inlineChatData.messages;
+    const chatList = document.getElementById('chatList');
+    const maxChats = 8;
+    const activeComments = [];
+    let messageIndex = 0;
+
+    if (!Array.isArray(chatUsers) || chatUsers.length === 0 ||
+        !Array.isArray(chatMessages) || chatMessages.length === 0) {
+      throw new Error('Inline chat data is missing users or messages.');
+    }
+
+    function formatCommentAge(seconds) {
+      if (seconds < 60) return seconds <= 1 ? 'just now' : seconds + 's ago';
+      return Math.floor(seconds / 60) + 'm ago';
+    }
+
+    function updateCommentTimes() {
+      const now = Date.now();
+      activeComments.forEach((comment) => {
+        comment.time.textContent = formatCommentAge(Math.floor((now - comment.createdAt) / 1000));
+      });
+    }
+
+    function renderComment(user, text) {
+      const el = document.createElement('div');
+      el.className = 'comment';
+
+      const avatar = document.createElement('div');
+      avatar.className = 'comment-avatar';
+      const initial = user.name.trim().charAt(0).toUpperCase() || '?';
+      avatar.textContent = initial;
+
+      if (typeof user.logoUrl === 'string' && user.logoUrl.trim()) {
+        try {
+          const logoUrl = new URL(user.logoUrl, window.location.href);
+          if (logoUrl.protocol === 'https:') {
+            const image = document.createElement('img');
+            image.src = logoUrl.href;
+            image.alt = '';
+            image.referrerPolicy = 'no-referrer';
+            image.addEventListener('error', () => {
+              image.remove();
+              avatar.textContent = initial;
+            }, { once: true });
+            avatar.textContent = '';
+            avatar.appendChild(image);
+          }
+        } catch (error) {
+          avatar.textContent = initial;
+        }
+      }
+
+      const body = document.createElement('div');
+      body.className = 'comment-body';
+      const meta = document.createElement('div');
+      meta.className = 'comment-meta';
+
+      const nameEl = document.createElement('span');
+      nameEl.className = 'comment-name';
+      nameEl.textContent = user.name;
+      meta.appendChild(nameEl);
+
+      if (user.isVip) {
+        const vip = document.createElement('span');
+        vip.className = 'comment-vip';
+        vip.textContent = 'VIP';
+        meta.appendChild(vip);
+      }
+
+      const time = document.createElement('span');
+      time.className = 'comment-time';
+      time.textContent = 'just now';
+      meta.appendChild(time);
+
+      const textEl = document.createElement('p');
+      textEl.className = 'comment-text';
+      textEl.textContent = text;
+      body.append(meta, textEl);
+      el.append(avatar, body);
+      return { element: el, time: time, createdAt: Date.now() };
+    }
+
+    function pushComment(user, text) {
+      const comment = renderComment(user, text);
+      chatList.appendChild(comment.element);
+      activeComments.push(comment);
+      while (activeComments.length > maxChats) {
+        activeComments.shift().element.remove();
+      }
+      chatList.scrollTop = chatList.scrollHeight;
+      updateCommentTimes();
+    }
+
+    function postNextComment() {
+      const user = chatUsers[Math.floor(Math.random() * chatUsers.length)];
+      const text = chatMessages[messageIndex % chatMessages.length];
+      messageIndex += 1;
+      pushComment(user, text);
+      window.setTimeout(postNextComment, 2200);
+    }
+
+    for (let index = 0; index < 5; index += 1) {
+      const user = chatUsers[Math.floor(Math.random() * chatUsers.length)];
+      pushComment(user, chatMessages[messageIndex]);
+      messageIndex += 1;
+    }
+    window.setInterval(updateCommentTimes, 1000);
+    window.setTimeout(postNextComment, 2200);
+
+  </script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"608576b3daa7461a8aa095f7ec120f66","r":1,"spa":2}' crossorigin="anonymous"></script>
 </body>
 </html>
